@@ -174,13 +174,12 @@ nav>*:hover>*{
 	color: #C51553;
 }
 aside{
-	
 	width: 100%;
     display: flex;
     position: relative;
 	justify-content: center;
     background-color: #0000AA;
-	color: #ffffff55;
+	color: #FF0066FF;
 	font-size: 1.5vw;
 }
 main{
@@ -220,6 +219,8 @@ main>midi-visualizer{
     background-color: #00000000;
 	color: #FFFFFF;
 	justify-content: center;
+	align-content: center;
+	text-align: center;
 	font-size: 2vw;
 	flex:1;
 	margin: 1vw;
@@ -244,6 +245,13 @@ main>midi-visualizer{
 	
 	animation-name: Broudspart2;
 	animation-duration: 0.2s;
+}
+#Menu>button>h3{
+	display: flex;
+    position: relative;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
 }
 #Musi{
 	width: 100%;
