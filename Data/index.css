@@ -1,0 +1,369 @@
+@keyframes Brouds {
+  from	{border-radius: 7vw;}
+  to	{border-radius: 1vw;}
+}
+@keyframes Sizmin {
+  from	{transform: scale(75%);}
+  to	{transform: scale(100%);}
+}
+@keyframes Sizmax {
+  from	{transform: scale(100%);}
+  to	{transform: scale(110%);}
+}
+@keyframes BroudsRever {
+  from	{border-radius: 1vw;}
+  to	{border-radius: 7vw;}
+}
+@keyframes SizminRever {
+  from	{transform: scale(100%);}
+  to	{transform: scale(75%);}
+}
+@keyframes SizmaxRever {
+  from	{transform: scale(110%);}
+  to	{transform: scale(100%);}
+}
+@keyframes Broudspar2 {
+  from	{border-style: solid; border-radius: 1vw;}
+  to	{border-style: double; border-radius: 5vw;}
+}
+@media (max-width: 800px) {
+	main{
+		flex-flow: column wrap!important;
+	}
+	main>*{
+		width: 90%;
+		Flex: 90%;
+	}
+}
+button, a, body, lable, p,
+h1, h2, h3, h4, h5, h6{
+	font-family: Times, Times new romans;
+}
+body{
+    background-color: #000011;
+	background-image: url("./IMG/BGs/MainBg.png");
+    background-size: 100vw;
+    background-position: top;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+	z-index: -1;
+}
+header{
+    background-size: 100%;
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+	justify-content: center;
+	align-content: center;
+	border-top: 2vh #000088 solid;
+	color: #ffffff;
+	height: 70vh;
+	width: 100%;
+	z-index: 0;
+}
+header>*{
+    display: flex;
+    position: relative;
+    background-position-x: center;
+    background-position-y: 20%;
+    background-size: cover;
+    width: 15vw;
+	height: 15vw;
+    border: 1vh white solid;
+    border-radius: 50%;
+}
+header>#R-ico{
+    background-image: url("./IMG/Users/RIco.png");
+	transform: translate(-5vw,0) scale(65%) rotateZ(-10deg) rotateY(+40deg);
+	box-shadow: -1.8vh 2vh 2.3vh #000000
+}
+header>#F-ico{
+    background-image: url("./IMG/Users/FIco.png");
+	transform: translate(0, -0.5vw);
+	box-shadow: 0vh 2vh 2.3vh #000000
+}
+header>#Y-ico{
+    background-image: url("./IMG/Users/YIco.png");
+	transform: translate(+5vw,0) scale(65%) rotateZ(+10deg) rotateY(-40deg);
+	box-shadow: +1.8vh 2vh 2.3vh #000000
+}
+nav{
+	width: 100%;
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+    background-color: #000088;
+	justify-content: center;
+	align-content: center;
+	color: #ffffff;
+	border-top: 3vh #000088 solid;
+	border-bottom: 3vh #000088 solid;
+}
+nav>*{
+	width: 20vh;
+	height: 20vh;
+    display: flex;
+    position: relative;
+    flex-flow: column wrap;
+	justify-content: center;
+	vertical-align:top;
+	text-align: center;
+	margin: 0px auto;
+    border: 2vh #D52563 solid;
+	border-radius: 15vw;
+	font-size: 3vh;
+	text-decoration: none;
+	
+	animation-name: BroudsRever;
+	animation-duration: 2s;
+}
+nav>*:hover{
+	border-radius: 1vw;
+	
+	animation-name: Brouds;
+	animation-duration: 0.2s;
+}
+nav>*>*{
+	width: 20vh;
+	height: 20vh;
+	transform: scale(75%);
+	cursor: pointer;
+	font-size: 7.5vh;
+	color: #D52563;
+	
+	animation-name: SizminRever;
+	animation-duration: 2s;
+}
+nav>*:hover>*{
+	transform: scale(100%);
+	
+	animation-name: Sizmin;
+	animation-duration: 0.2s;
+}
+#Mp3s:hover{
+    border-color: #67E753;
+}
+#Timz:hover{
+    border-color: #E7E7E7;
+}
+#Mids:hover{
+    border-color: #65C8E1;
+}
+#HomP:hover{
+    border-color: #C51553;
+	color: #C51553;
+}
+aside{
+	
+	width: 100%;
+    display: flex;
+    position: relative;
+	justify-content: center;
+	align-content: center;
+    background-color: #0000AA;
+	color: #ffffff;
+	font-size:4vh;
+}
+main{
+	width: 100%;
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+	justify-content: center;
+	align-content: center;
+    background-color: #000055;
+	padding: 1vh;
+	color: #ffffff;
+	font-size:4vh;
+}
+main>*{
+    display: flex;
+    position: relative;
+    flex-flow: column wrap;
+	border-radius:20px;
+    border: 2px white solid;
+	justify-content: top;
+	text-align: center;
+	margin:0.8vh;
+	flex: 1;
+}
+main>*>*{
+    display: flex;
+    position: relative;
+    flex-flow: column wrap;
+}
+main>* a>img{
+	width: 4vh;
+	height: relative;
+	margin: auto 10px;
+	border-radius:20px;
+	transform: translate(0,40%);
+}
+main a{
+	transform: scale(100%);
+	text-decoration: none;
+	cursor: pointer;
+	
+	animation-name: SizmaxRever;
+	animation-duration: 2s;
+}
+main a:hover{
+	transform: scale(110%);
+	
+	animation-name: Sizmax;
+	animation-duration: 0.2s;
+}
+footer{
+    display: flex;
+    position: relative;
+	flex-flow: column wrap;
+    background-color: #000088;
+    color: #FFFFFF;
+    bottom: 0px;
+    margin: 0;
+    padding: 40px;
+	z-index:1;
+}
+footer>*{
+	margin:0px;
+	color:#ffffff88;
+    font-size: 2vh;
+}
+/*------*/
+.gris{color:#bbbbbb !important;}
+.rojo{color:#ffaaaa !important;}
+.morado{color:#ff99ff !important;}
+.blanco{color:#ffffff !important;}
+.azul{color:#ffffff !important;}
+.ports>*>*,.ports>*{
+	height: 28vh;
+	width: relative;
+	margin: auto 2vw;
+	border-radius: 5vw;
+}
+.audioSection{
+}
+.audioParts{
+}
+.audioCluster{
+	display: flex;
+	flex-flow: column nowrap!important;
+    position: relative;
+	justify-content: center;
+	align-content: center;
+	border: none;
+}
+.audioCluster>button{
+	display: flex;
+    position: relative;
+	right: 0px;
+	width: 40%;
+    background-color: #00000000;
+	color: #FFFFFF;
+	font-size: 5vh;
+	flex:1;
+	border: solid #5555FF 2vh;
+	border-radius: 5vw;
+	
+	animation-name: BroudsRever;
+	animation-duration: 2s;
+}
+.audioCluster>button:hover{
+	border-radius: 1vw;
+	border: solid #0000FF 2vh;
+	
+	animation-name: Brouds;
+	animation-duration: 0.2s;
+}
+.audioList{
+	display: flex;
+	flex-flow: column wrap!important;
+    position: relative;
+	background-color: #2244AA88;
+	margin-top: 2vh;
+	margin-bottom: 4vh;
+	margin-left: 2vh;
+	margin-right: 2vh;
+	padding:2vh;
+	justify-content: top;
+	align-content: top;
+	border-radius: 2vh;
+}
+.audioSample{
+	display: flex;
+	flex-flow: row wrap!important;
+    position: relative;
+	font-size: 3vh;
+	height:content-fit;
+	transform: translate(0%, 30%);
+}
+.audioSample>a{
+	width: 6vh;
+	height: 4vh;
+}
+.audioSample>a>img{
+	transform: translate(-10%, -20%) scale(120%);
+	width: 4vh;
+	height: 4vh;
+}
+.audioSample>lable{
+	flex:7;
+	text-align:left;
+	z-index:-1;
+}
+.audioSample>audio{
+	display: flex;
+    position: relative;
+	margin-right:0px;
+	flex:3;
+	width: 30%!important;
+	min-width: 30%!important;
+	max-width: 30%!important;
+	transform: translate(0%, -30%);
+	border-radius: 2vh;
+	background-color: #FFFFFF;
+}
+#topMus{
+	display: flex;
+    position: relative;
+	flex-flow: column wrap;
+}
+#topMus>*{ width: 90%; }
+#Menu{
+	display: flex;
+    position: relative;
+	flex-flow: row wrap!important;
+	justify-content: top;
+	align-content: center;
+	border: none;
+}
+#Menu>button{
+	display: flex;
+    position: relative;
+    background-color: #00000000;
+	color: #FFFFFF;
+	margin-top: 0px;
+	flex:1;
+	border: solid #5555FF 2vh;
+	border-radius: 5vw;
+	
+	animation-name: BroudsRever;
+	animation-duration: 2s;
+}
+#Menu>button:hover{
+	border: solid #FFFFFF 2vh;
+	border-radius: 1vw;
+	
+	animation-name: Brouds;
+	animation-duration: 0.2s;
+}
+#Menu>button:active{
+    background-color: #00000055;
+	border: double #FFAAAA 2vh;
+	border-radius: 6vw;
+	
+	animation-name: Broudspar2;
+	animation-duration: 0.2s;
+}

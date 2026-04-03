@@ -1,0 +1,118 @@
+body {
+	background-color: #444444;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	width: 98%;
+}
+article {
+	background-color: #777777;
+	width: 80%;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	padding: 10px;
+	margin: 10px;
+}
+section {
+	width: 80%;
+	background-color: #ffffff;
+	text-align: center;
+	display: flex;
+	flex-flow: column nowrap;
+	border: #000000 0.1vw solid;
+	padding: 0;
+	margin: 0;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border: #000000 0.3vw solid;
+	border-bottom: none;
+}
+tbody {
+	padding: 10px;
+	margin: 10px;
+	border: none;
+	background-color: #000000;
+}
+button{
+	background-color: #ffffff;
+	border: double transparent 3px;
+	border-radius: 30px;
+}
+button:hover{
+	background-color: #aaffff;
+}
+button:active{
+	background-color: #aaaaaa;
+	border: double 3px;
+}
+input {
+	background-color: inherit;
+	color: inherit;
+	font: 0.8vw 'Times New Roman', Times, serif;
+	border: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+img {
+	max-width: 100%;
+	border: #000000 0.1vw solid;
+}
+::-webkit-calendar-picker-indicator {
+	background: transparent;
+	position: absolute;
+}
+th,
+td {
+	background-color: inherit;
+	border: #000000 0.045vw solid;
+	border-bottom: none;
+	font: 0.8vw 'Times New Roman', Times, serif;
+	padding: 0;
+	margin: 0;
+}
+#HomP>*{
+	width:13vh; height:13vh;
+}
+#tm8,#t0,#tp8 {
+	background-color: red;
+	color: #ffffff;
+}
+#tm7,#tp1,#tp9 {
+	background-color: orange;
+	color: #000000;
+}
+#tm6,#tp2,#tp10 {
+	background-color: yellow;
+	color: #000000;
+}
+#tm5,#tp3,#tp11 {
+	background-color: lime;
+	color: #000000;
+}
+#tm12,#tm4,#tp4,#tp12 {
+	background-color: cyan;
+	color: #000000;
+}
+#tm11,#tm3,#tp5,#tp13 {
+	background-color: blue;
+	color: #ffffff;
+}
+#tm10,#tm2,#tp6 {
+	background-color: #7B00FF;
+	color: #ffffff;
+}
+#tm9,#tm1,#tp7 {
+	background-color: magenta;
+	color: #000000;
+}
+.I {
+	background-color: #aaaaaa;
+	padding: 10px;
+	margin: 10px;
+	border: #000000 0.3vw solid;
+	border-radius: 30px;
+}

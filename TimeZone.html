@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="Data/Timezones.css">
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+		<title>Time zones</title>
+	</head>
+	<body>
+		<article style="padding: 2px; background-color: white; width: 100%; text-align:center;">
+			<p> This is set in the 24:00 hour system </p>
+			<a id="HomP" href="index.html"> <img src="./Data/IMG/Ico/HP.png"> </a>
+		</article>
+		<article>
+			<br>
+			<button id="a-make" href="#">Make a screenshot</button>
+			<br>
+			<section id="screenshot">
+				<table>
+					<tr>
+						<td id="tm12">-12</td>
+						<td id="tm11">-11</td>
+						<td id="tm10">-10</td>
+						<td id="tm9">-9</td>
+						<td id="tm8">-8</td>
+						<td id="tm7">-7</td>
+						<td id="tm6">-6</td>
+						<td id="tm5">-5</td>
+						<td id="tm4">-4</td>
+						<td id="tm3">-3</td>
+						<td id="tm2">-2</td>
+						<td id="tm1">-1</td>
+						<td id="t0">UTC</td>
+						<td id="tp1">+1</td>
+						<td id="tp2">+2</td>
+						<td id="tp3">+3</td>
+						<td id="tp4">+4</td>
+						<td id="tp5">+5</td>
+						<td id="tp6">+6</td>
+						<td id="tp7">+7</td>
+						<td id="tp8">+8</td>
+						<td id="tp9">+9</td>
+						<td id="tp10">+10</td>
+						<td id="tp11">+11</td>
+						<td id="tp12">+12</td>
+						<td id="tp13">-13</td>
+					</tr>
+					<tr>
+						<th id="tm12"><input class="Tset" type="time" value="12:00" onchange="setime(-12, this.value)"></th>
+						<th id="tm11"><input class="Tset" type="time" value="13:00" onchange="setime(-11, this.value)"></th>
+						<th id="tm10"><input class="Tset" type="time" value="14:00" onchange="setime(-10, this.value)"></th>
+						<th id="tm9"><input class="Tset" type="time" value="15:00" onchange="setime(-9, this.value)"></th>
+						<th id="tm8"><input class="Tset" type="time" value="16:00" onchange="setime(-8, this.value)"></th>
+						<th id="tm7"><input class="Tset" type="time" value="17:00" onchange="setime(-7, this.value)"></th>
+						<th id="tm6"><input class="Tset" type="time" value="18:00" onchange="setime(-6, this.value)"></th>
+						<th id="tm5"><input class="Tset" type="time" value="19:00" onchange="setime(-5, this.value)"></th>
+						<th id="tm4"><input class="Tset" type="time" value="20:00" onchange="setime(-4, this.value)"></th>
+						<th id="tm3"><input class="Tset" type="time" value="21:00" onchange="setime(-3, this.value)"></th>
+						<th id="tm2"><input class="Tset" type="time" value="22:00" onchange="setime(-2, this.value)"></th>
+						<th id="tm1"><input class="Tset" type="time" value="23:00" onchange="setime(-1, this.value)"></th>
+						<th id="t0"><input class="Tset" type="time" value="00:00" onchange="setime(0, this.value)"></th>
+						<th id="tp1"><input class="Tset" type="time" value="01:00" onchange="setime(1, this.value)"></th>
+						<th id="tp2"><input class="Tset" type="time" value="02:00" onchange="setime(2, this.value)"></th>
+						<th id="tp3"><input class="Tset" type="time" value="03:00" onchange="setime(3, this.value)"></th>
+						<th id="tp4"><input class="Tset" type="time" value="04:00" onchange="setime(4, this.value)"></th>
+						<th id="tp5"><input class="Tset" type="time" value="05:00" onchange="setime(5, this.value)"></th>
+						<th id="tp6"><input class="Tset" type="time" value="06:00" onchange="setime(6, this.value)"></th>
+						<th id="tp7"><input class="Tset" type="time" value="07:00" onchange="setime(7, this.value)"></th>
+						<th id="tp8"><input class="Tset" type="time" value="08:00" onchange="setime(8, this.value)"></th>
+						<th id="tp9"><input class="Tset" type="time" value="09:00" onchange="setime(9, this.value)"></th>
+						<th id="tp10"><input class="Tset" type="time" value="10:00" onchange="setime(10, this.value)"></th>
+						<th id="tp11"><input class="Tset" type="time" value="11:00" onchange="setime(11, this.value)"></th>
+						<th id="tp12"><input class="Tset" type="time" value="12:00" onchange="setime(12, this.value)"></th>
+						<th id="tp13"><input class="Tset" type="time" value="13:00" onchange="setime(13, this.value)"></th>
+					</tr>
+				</table>
+				<img src="DATA/IMG/Mapamundi.png">
+			</section>
+		</article>
+		<br>
+		<article id="main"></article>
+	</body>
+</html>
+<script src="Data/html2canvas.js"></script>
+<script>
+	function makeScreenshot() {
+		html2canvas(document.getElementById("screenshot"), { scale: 5 }).then(canvas => {
+			prev = document.getElementById("canvasID");
+			if (prev) { prev.remove(); }
+			canvas.id = "canvasID";
+			canvas.style.display = 'linear';
+			document.getElementById("main").appendChild(canvas);
+		});
+	}
+	function setime(number, value) {
+		var caH = Number(value.split(':')[0]);
+		var caM = value.split(':')[1];
+		var fi = caH - number;
+		if ((fi) < 0) { caHp = (fi + 24); } else if ((fi) > 23) { caHp = (fi - 24); } else { caHp = fi; }
+		let valT = document.getElementsByClassName('Tset');
+		for (let i = 0, o = caHp - 12; i < valT.length; i++, o++) {
+			if (o < 0) { valT[i].value = (o + 24).toString().padStart(2, '0') + ':' + caM; }
+			else if (o > 23) { valT[i].value = (o - 24).toString().padStart(2, '0') + ':' + caM; }
+			else { valT[i].value = o.toString().padStart(2, '0') + ':' + caM; }
+		}
+	}
+	document.getElementById("a-make").addEventListener('click', function () { makeScreenshot(); }, false);
+</script>
