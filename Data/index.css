@@ -199,7 +199,7 @@ main{
 	color: #FFFFFF;
 	font-size: 1.50vw;
 }
-main>h1{
+main>midi-visualizer{
 	border: solid #FFCCCC 0.5vw;
 	border-radius: 20vw;
 	margin: 2vw;
@@ -360,7 +360,7 @@ main>h1{
 	border-radius: 2vw;
 	padding: 1%;
 }
-.audioSample>audio{
+.audioSample>audio,.audioSample>midi-visualizer{
 	display:flex;
 	flex-flow: row nowrap!important;
     position: relative;
