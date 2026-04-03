@@ -3,14 +3,20 @@ var PthLists=[], Mainsecths = Object.keys( Main );
 function BtnSH(inst1, inst2) {
 	let btn1 = document.getElementsByClassName(inst1);
 	if (inst2==""){
-		for (let i=0; btn1.length>i; i++) { btn1[i].style.display = "none"; }
+		for (let i=0; btn1.length>i; i++) {
+			btn1[i].style.display = "none";
+		}
 	}
 	else {
 		let btn2 = document.getElementById(inst2);
 		if (btn2.style.display != "flex") {
-			for (let i=0; btn1.length>i; i++) { btn1[i].style.display = "none"; }
+			for (let i=0; btn1.length>i; i++) { 
+				btn1[i].style.display = "none";
+			}
 			btn2.style.display = "flex";
-		} else { btn2.style.display = "none"; }
+		} else { 
+			btn2.style.display = "none"; 
+		}
 	}
 	audios.forEach(aEl => { aEl.pause(); });
 }

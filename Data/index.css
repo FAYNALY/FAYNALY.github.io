@@ -8,7 +8,7 @@
 }
 @keyframes Sizmax {
   from	{transform: scale(100%);}
-  to	{transform: scale(110%);}
+  to	{transform: scale(120%);}
 }
 @keyframes BroudsRever {
   from	{border-radius: 1vw;}
@@ -19,20 +19,31 @@
   to	{transform: scale(75%);}
 }
 @keyframes SizmaxRever {
-  from	{transform: scale(110%);}
+  from	{transform: scale(120%);}
   to	{transform: scale(100%);}
 }
 @keyframes Broudspar2 {
   from	{border-style: solid; border-radius: 1vw;}
   to	{border-style: double; border-radius: 5vw;}
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 	main{
+		font-size: 5vw!important;
 		flex-flow: column wrap!important;
 	}
 	main>*{
 		width: 90%;
 		Flex: 90%;
+	}
+	main>*>*>a>img{
+		width: 10vw!important;
+	}
+	main>*>*>a, main>*>*>a>iframe{
+		max-width: 99%!important;
+	}
+	.audioSection a>img{
+		width: 3vw!important;
+		height: 3vw!important;
 	}
 }
 button, a, body, lable, p,
@@ -45,7 +56,7 @@ body{
     background-size: 100vw;
     background-position: top;
     min-width: 100%;
-    min-height: 100%;
+    min-height: 50%;
     margin: 0;
     padding: 0;
 	z-index: -1;
@@ -57,9 +68,14 @@ header{
     flex-flow: row wrap;
 	justify-content: center;
 	align-content: center;
-	border-top: 2vh #000088 solid;
+	border-top: 1vw #000088 solid;
 	color: #ffffff;
-	height: 70vh;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+	height: 25vw;
+    min-height: 25vw%;
+    max-height: 25vw%;
 	width: 100%;
 	z-index: 0;
 }
@@ -71,23 +87,23 @@ header>*{
     background-size: cover;
     width: 15vw;
 	height: 15vw;
-    border: 1vh white solid;
+    border: 0.5vw white solid;
     border-radius: 50%;
 }
 header>#R-ico{
     background-image: url("./IMG/Users/RIco.png");
 	transform: translate(-5vw,0) scale(65%) rotateZ(-10deg) rotateY(+40deg);
-	box-shadow: -1.8vh 2vh 2.3vh #000000
+	box-shadow: -0.9vw 1vw 1.15vw #000000
 }
 header>#F-ico{
     background-image: url("./IMG/Users/FIco.png");
 	transform: translate(0, -0.5vw);
-	box-shadow: 0vh 2vh 2.3vh #000000
+	box-shadow: 0vw 1vw 1.15vw #000000
 }
 header>#Y-ico{
     background-image: url("./IMG/Users/YIco.png");
 	transform: translate(+5vw,0) scale(65%) rotateZ(+10deg) rotateY(-40deg);
-	box-shadow: +1.8vh 2vh 2.3vh #000000
+	box-shadow: +0.9vw 1vw 1.15vw #000000
 }
 nav{
 	width: 100%;
@@ -98,12 +114,12 @@ nav{
 	justify-content: center;
 	align-content: center;
 	color: #ffffff;
-	border-top: 3vh #000088 solid;
-	border-bottom: 3vh #000088 solid;
+	border-top: 1.5vw #000088 solid;
+	border-bottom: 1.5vw #000088 solid;
 }
 nav>*{
-	width: 20vh;
-	height: 20vh;
+	width: 10vw;
+	height: 10vw;
     display: flex;
     position: relative;
     flex-flow: column wrap;
@@ -111,9 +127,9 @@ nav>*{
 	vertical-align:top;
 	text-align: center;
 	margin: 0px auto;
-    border: 2vh #D52563 solid;
+    border: 1vw #D52563 solid;
 	border-radius: 15vw;
-	font-size: 3vh;
+	font-size: 1.5vw;
 	text-decoration: none;
 	
 	animation-name: BroudsRever;
@@ -126,11 +142,11 @@ nav>*:hover{
 	animation-duration: 0.2s;
 }
 nav>*>*{
-	width: 20vh;
-	height: 20vh;
+	width: 10vw;
+	height: 10vw;
 	transform: scale(75%);
 	cursor: pointer;
-	font-size: 7.5vh;
+	font-size: 3.75vw;
 	color: #D52563;
 	
 	animation-name: SizminRever;
@@ -164,7 +180,7 @@ aside{
 	align-content: center;
     background-color: #0000AA;
 	color: #ffffff55;
-	font-size:3vh;
+	font-size: 1.5vw;
 }
 main{
 	width: 100%;
@@ -174,9 +190,9 @@ main{
 	justify-content: center;
 	align-content: center;
     background-color: #000055;
-	padding: 1vh;
+	padding: 0.5vw;
 	color: #ffffff;
-	font-size:4vh;
+	font-size: 1.50vw;
 }
 main>*{
     display: flex;
@@ -186,7 +202,7 @@ main>*{
     border: 2px white solid;
 	justify-content: top;
 	text-align: center;
-	margin:0.8vh;
+	margin:0.4vw;
 	flex: 1;
 }
 main>*>*{
@@ -194,14 +210,16 @@ main>*>*{
     position: relative;
     flex-flow: column wrap;
 }
-main>* a>img{
-	width: 4vh;
+main a>img{
+	width: 1.5vw;
 	height: relative;
 	margin: auto 10px;
 	border-radius:20px;
-	transform: translate(0,40%);
+	transform: translate(0%,40%);
 }
 main a{
+	width: 100%;
+	height: relative;
 	transform: scale(100%);
 	text-decoration: none;
 	cursor: pointer;
@@ -210,7 +228,7 @@ main a{
 	animation-duration: 2s;
 }
 main a:hover{
-	transform: scale(110%);
+	transform: scale(120%);
 	
 	animation-name: Sizmax;
 	animation-duration: 0.2s;
@@ -229,7 +247,7 @@ footer{
 footer>*{
 	margin:0px;
 	color:#ffffff88;
-    font-size: 2vh;
+    font-size: 1vw;
 }
 /*------*/
 .gris{color:#bbbbbb !important;}
@@ -237,15 +255,11 @@ footer>*{
 .morado{color:#ff99ff !important;}
 .blanco{color:#ffffff !important;}
 .azul{color:#ffffff !important;}
-.ports>*>*,.ports>*{
-	height: 28vh;
-	width: relative;
-	margin: auto 2vw;
-	border-radius: 5vw;
-}
 .audioSection{
+	height:content-fit;
 }
 .audioParts{
+	height:content-fit;
 }
 .audioCluster{
 	display: flex;
@@ -262,9 +276,8 @@ footer>*{
 	width: 40%;
     background-color: #00000000;
 	color: #FFFFFF;
-	font-size: 5vh;
-	flex:1;
-	border: solid #5555FF 2vh;
+	font-size: 2.5vw;
+	border: solid #5555FF 1vw;
 	border-radius: 5vw;
 	
 	animation-name: BroudsRever;
@@ -272,7 +285,7 @@ footer>*{
 }
 .audioCluster>button:hover{
 	border-radius: 1vw;
-	border: solid #0000FF 2vh;
+	border: solid #0000FF 1vw;
 	
 	animation-name: Brouds;
 	animation-duration: 0.2s;
@@ -282,48 +295,62 @@ footer>*{
 	flex-flow: column wrap!important;
     position: relative;
 	background-color: #2244AA88;
-	margin-top: 2vh;
-	margin-bottom: 4vh;
-	margin-left: 2vh;
-	margin-right: 2vh;
-	padding:2vh;
-	justify-content: top;
-	align-content: top;
-	border-radius: 2vh;
+	padding:1.5vw;
+	justify-content: flex-start;
+	align-content: flex-start;
+	border-radius: 1vw;
 }
 .audioSample{
 	display: flex;
-	flex-flow: row wrap!important;
+	flex-flow: row nowrap!important;
     position: relative;
-	font-size: 3vh;
-	height:content-fit;
-	transform: translate(0%, 30%);
+	width: 100%;
+	
+	font-size: 1.5vw;
+	padding:0.3%;
 }
 .audioSample>a{
-	width: 6vh;
-	height: 4vh;
+	display:flex;
+	flex-flow: row nowrap!important;
+	width: 2vw;
+	height: 2vw;
+	padding: 1%;
+	transform: scale(100%);
+	animation-name: SizmaxRever;
+	animation-duration: 2s;
+}
+.audioSample>a:hover{
+	transform: scale(120%);
+	
+	animation-name: Sizmax;
+	animation-duration: 0.2s;
 }
 .audioSample>a>img{
-	transform: translate(-10%, -20%) scale(120%);
-	width: 4vh;
-	height: 4vh;
+	display:flex;
+	flex-flow: row nowrap!important;
+	transform: translate(-1vw, -0.5vw) scale(100%);
+	width: 3vw;
+	height: 3vw;
 }
 .audioSample>lable{
-	flex:7;
-	text-align:left;
-	z-index:-1;
+	display:flex;
+	flex-flow: row nowrap!important;
+    position: relative;
+	flex: 7;
+	background-color: #2244AA88;
+	text-align: left;
+	border-radius: 2vw;
+	padding: 1%;
 }
 .audioSample>audio{
-	display: flex;
+	display:flex;
+	flex-flow: row nowrap!important;
     position: relative;
-	margin-right:0px;
-	flex:3;
-	width: 30%!important;
-	min-width: 30%!important;
-	max-width: 30%!important;
-	transform: translate(0%, -30%);
-	border-radius: 2vh;
+	flex: 3!important;
+	height: 2vw;
 	background-color: #FFFFFF;
+	border-radius: 1vw;
+	padding: 1%;
 }
 #topMus{
 	display: flex;
@@ -346,16 +373,16 @@ footer>*{
 	color: #FFFFFF;
 	justify-content: center;
 	margin-top: 0px;
-	font-size: 4vh;
+	font-size: 2vw;
 	flex:1;
-	border: solid #5555FF 2vh;
+	border: solid #5555FF 1vw;
 	border-radius: 5vw;
 	
 	animation-name: BroudsRever;
 	animation-duration: 2s;
 }
 #Menu>button:hover{
-	border: solid #FFFFFF 2vh;
+	border: solid #FFFFFF 1vw;
 	border-radius: 1vw;
 	
 	animation-name: Brouds;
@@ -363,7 +390,7 @@ footer>*{
 }
 #Menu>button:active{
     background-color: #00000055;
-	border: double #FFAAAA 2vh;
+	border: double #FFAAAA 1vw;
 	border-radius: 6vw;
 	
 	animation-name: Broudspar2;
