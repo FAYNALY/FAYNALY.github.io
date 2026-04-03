@@ -344,7 +344,9 @@ footer>*{
     position: relative;
     background-color: #00000000;
 	color: #FFFFFF;
+	justify-content: center;
 	margin-top: 0px;
+	font-size: 4vh;
 	flex:1;
 	border: solid #5555FF 2vh;
 	border-radius: 5vw;
@@ -366,4 +368,7 @@ footer>*{
 	
 	animation-name: Broudspar2;
 	animation-duration: 0.2s;
+}
+#Menu>button>*{
+	margin:0px;
 }
