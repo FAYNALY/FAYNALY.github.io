@@ -1,4 +1,4 @@
-Main["Cover Arragments"] = [
+Main["Cover Arrangements"] = [
 	"A Sunny Day Is Watching Over You - Nekojishi",
 	"Addict - Hazbin Hotel",
 	"An Enigmatic Encounter - Undertale (Last breath) ver. 2",

@@ -44,10 +44,8 @@ for (let i=0; PthLists.length>i; i++) {
 			pinch.innerHTML=`
 <a href="./MIDI/${PthLists[i]}.mid" download><img src="./Data/IMG/Ico/MD.png"></a>
 <lable>${pthSec[j]}</lable>
-<audio controls>
-	<source src="./MIDI/${PthLists[i]}.mid" type="audio/mpeg">
-	Your browser does not support the audio element.
-</audio>
+<midi-player src="./MIDI/${PthLists[i]}.mid" sound-font>
+</midi-player>
 `			;
 			pthnde.lastChild.lastChild.append(pinch);
 		}
