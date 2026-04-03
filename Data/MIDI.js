@@ -20,7 +20,8 @@ function Lvs(inst1, inst2) {
 		if (!inst2||inst2=="") { cosPrev=""; } else { cosPrev=inst2+'/'; } 
 		if (Object(PthSc) === PthSc) { Lvs(PthSc,cosPrev+PthLv); } else if (PthSc.length>1) { PthLists.push(cosPrev+PthSc); } else { break; }
 	}
-}Lvs(Main);
+}
+Lvs(Main);
 for (let i=0; Mainsecths.length>i; i++) {
 	let gefBtn = document.createElement('button');
 	gefBtn.setAttribute("onclick", `BtnSH('audioSection', 'hidshow_${Mainsecths[i]}'); BtnSH('audioList','');`);

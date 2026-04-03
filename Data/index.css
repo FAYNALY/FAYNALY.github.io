@@ -330,7 +330,7 @@ main>midi-visualizer{
 	font-size: 1.5vw;
 	padding:0.3%;
 }
-.audioSample>a{
+body a{
 	display:flex;
 	flex-flow: row nowrap!important;
 	width: 2vw;
@@ -342,20 +342,20 @@ main>midi-visualizer{
 	cursor: pointer;
 	animation-duration: 2s;
 }
-.audioSample>a:hover{
+body a:hover{
 	transform: scale(120%);
 	
 	animation-name: Sizmax;
 	animation-duration: 0.2s;
 }
-.audioSample>a>img{
+body a>img{
 	display:flex;
 	flex-flow: row nowrap!important;
 	transform: translate(-1vw, -0.5vw) scale(100%);
 	width: 3vw;
 	height: 3vw;
 }
-.audioSample>a>img{
+body a>img{
 	border-radius:20px;
 }
 .audioSample>lable{
