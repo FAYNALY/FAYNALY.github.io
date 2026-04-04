@@ -29,7 +29,7 @@
 @media (max-width: 1000px) {
 	main{
 		font-size: 5vw!important;
-		flex-flow: column wrap!important;
+		flex-flow: column wrap;
 	}
 	main>*{
 		width: 90%;
@@ -184,7 +184,7 @@ aside{
 }
 main{
     display: flex;
-    flex-flow: column wrap!important;
+    flex-flow: column wrap;
     position: relative;
 	width: 100%;
 	max-width: 100%;
@@ -203,10 +203,70 @@ main>midi-visualizer{
 	border-radius: 20vw;
 	margin: 2vw;
 }
+.triSec{
+	display:flex;
+	flex-flow: row wrap;
+    position: relative;
+}
+.triSec>*{
+	display:flex;
+	flex-flow: column wrap;
+    position: relative;
+	flex:1;
+	border: solid #FFFFFF 0.3vw;
+	border-radius: 1vw;
+}
+.triSec>*>*{
+	display:flex;
+	flex-flow: column wrap;
+    position: relative;
+	width: 100%;
+}
+.triSec>*>.ports{
+	flex-flow: row wrap;
+	bottom: 0vw;
+	align-content: center;
+}
+.triSec>*>*>*{
+	display:flex;
+	flex-flow: column wrap;
+	width: 100%;
+	text-align: center;
+}
+.triSec a{
+	display:flex;
+	flex-flow: row wrap;
+	width: 100%;
+	padding: 1%;
+	transform: scale(100%);
+	animation-name: SizmaxRever;
+	text-decoration: none;
+	cursor: pointer;
+	animation-duration: 2s;
+	justify-content: center;
+	align-content:center;
+	text-align: center;
+}
+.triSec a:hover{
+	transform: scale(120%);
+	
+	animation-name: Sizmax;
+	animation-duration: 0.2s;
+}
+.triSec a>img{
+	display:flex;
+	flex-flow: row nowrap;
+	transform: translate(1vw, -0.8vw) scale(100%);
+	width: 3vw;
+	height: 3vw;
+}
+.triSec a>img{
+	border-radius:20px
+}
 #Menu{
 	display: flex;
     position: relative;
-	flex-flow: row wrap!important;
+	flex-flow: row wrap;
 	width: 100%;
 	justify-content: center;
 	align-content: center;
@@ -216,6 +276,7 @@ main>midi-visualizer{
 #Menu>button{
 	display: flex;
     position: relative;
+	flex-flow: row wrap;
     background-color: #00000000;
 	color: #FFFFFF;
 	justify-content: center;
@@ -257,13 +318,13 @@ main>midi-visualizer{
 	width: 100%;
 	display: flex;
     position: relative;
-	flex-flow: row wrap!important;
+	flex-flow: row wrap;
 }
 .audioSection{
 	width: 100%;
 	display: flex;
     position: relative;
-	flex-flow: column wrap!important;
+	flex-flow: column wrap;
 	justify-content: center;
 	align-content: center;
 }
@@ -271,7 +332,7 @@ main>midi-visualizer{
 	width: 100%;
 	display: flex;
     position: relative;
-	flex-flow: column wrap!important;
+	flex-flow: column wrap;
 	justify-content: center;
 	align-content: center;
 }
@@ -280,26 +341,31 @@ main>midi-visualizer{
 	background-color: #;
 	border: solid #FFFFFF 0.25vw;
 	border-radius: 1vw;
+	justify-content: center;
+	align-content: center;
 }
 .audioCluster{
 	display: flex;
-	flex-flow: column nowrap!important;
+	flex-flow: column nowrap;
     position: relative;
 	width: 100%;
 	justify-content: center;
-	border: none;
+	align-content: center;
 }
 .audioCluster>button{
 	display: flex;
+	flex-flow: row wrap;
     position: relative;
-	right: 0px;
-	width: 40%;
+	justify-content: center;
+	align-content: center;
     background-color: #00000000;
 	color: #FFFFFF;
-	font-size: 2.5vw;
-	border: solid #5555FF 1vw;
-	text-align: center;
+	min-width: 40%;
+	max-width: 70%;
+	font-size: 2vw;
+	padding: 0.5vw;
 	border-radius: 5vw;
+	border: solid #5555FF 1vw;
 	
 	animation-name: BroudsRever;
 	animation-duration: 2s;
@@ -313,26 +379,26 @@ main>midi-visualizer{
 }
 .audioList{
 	display: flex;
-	flex-flow: column wrap!important;
+	flex-flow: column wrap;
     position: relative;
+	width: 100%;
 	background-color: #2244AA88;
-	padding:1.5vw;
-	justify-content: flex-start;
-	align-content: flex-start;
+	justify-content: center;
+	align-content: center;
 	border-radius: 1vw;
 }
 .audioSample{
 	display: flex;
-	flex-flow: row nowrap!important;
+	flex-flow: row nowrap;
     position: relative;
 	width: 100%;
 	
 	font-size: 1.5vw;
 	padding:0.3%;
 }
-body a{
+.audioSample>a{
 	display:flex;
-	flex-flow: row nowrap!important;
+	flex-flow: row nowrap;
 	width: 2vw;
 	height: 2vw;
 	padding: 1%;
@@ -342,25 +408,25 @@ body a{
 	cursor: pointer;
 	animation-duration: 2s;
 }
-body a:hover{
+.audioSample>a:hover{
 	transform: scale(120%);
 	
 	animation-name: Sizmax;
 	animation-duration: 0.2s;
 }
-body a>img{
+.audioSample>a>img{
 	display:flex;
-	flex-flow: row nowrap!important;
+	flex-flow: row nowrap;
 	transform: translate(-1vw, -0.5vw) scale(100%);
 	width: 3vw;
 	height: 3vw;
 }
-body a>img{
+.audioSample>a>img{
 	border-radius:20px;
 }
 .audioSample>lable{
 	display:flex;
-	flex-flow: row nowrap!important;
+	flex-flow: row nowrap;
     position: relative;
 	flex: 7;
 	background-color: #2244AA88;
@@ -370,7 +436,7 @@ body a>img{
 }
 .audioSample>audio,.audioSample>midi-visualizer{
 	display:flex;
-	flex-flow: row nowrap!important;
+	flex-flow: row nowrap;
     position: relative;
 	flex: 3!important;
 	height: 2vw;
