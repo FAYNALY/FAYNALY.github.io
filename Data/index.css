@@ -417,7 +417,7 @@ main>midi-visualizer{
 .audioSample>a>img{
 	display:flex;
 	flex-flow: row nowrap;
-	transform: translate(-1vw, -0.5vw) scale(100%);
+	transform: translate(-0.5vw, -0.5vw) scale(100%);
 	width: 3vw;
 	height: 3vw;
 }
