@@ -1,7 +1,6 @@
 Main["Mine"]={};
 Main["Mine"]["Lists"]={};
 Main["Mine"]["Mine"] = [
-	"[OVERLOADED - Castration] [Deltarune Chapters combined] - Orchestral",
 	"[OVERLOADED] [Deltarune Chapters combined] - Orchestral [Instrumental]",
 	"[OVERLOADED] [Deltarune Chapters combined] - Orchestral",
 	"·IN(K)TAKE· Trailer",
@@ -166,7 +165,6 @@ Main["Mine"]["Lists"]["Deltarune - The (Un) Happy Few"] = [
 Main["Mine"]["Lists"]["Detarune - Chapters combined"] = [
 	"[OVERLOADED] Intrumental",
 	"[OVERLOADED]",
-	"[OVERLOADED-Castration]",
 	"A terrible joke",
 	"Another one",
 	"Attack of the checker queen",
