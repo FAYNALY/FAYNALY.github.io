@@ -95,17 +95,17 @@ header>*{
 }
 header>#R-ico{
     background-image: url("./IMG/Users/RIco.png");
-	transform: translate(-5vw,0) scale(65%) rotateZ(-10deg) rotateY(+40deg);
+	transform: translate(-5vw,0.5vw) scale(65%) rotateZ(-10deg) rotateY(+40deg);
 	box-shadow: -0.9vw 1vw 1.15vw #000000
 }
 header>#F-ico{
     background-image: url("./IMG/Users/FIco.png");
-	transform: translate(0, -0.5vw);
+	transform: translate(0, 0.5vw);
 	box-shadow: 0vw 1vw 1.15vw #000000
 }
 header>#Y-ico{
     background-image: url("./IMG/Users/YIco.png");
-	transform: translate(+5vw,0) scale(65%) rotateZ(+10deg) rotateY(-40deg);
+	transform: translate(+5vw,0.5vw) scale(65%) rotateZ(+10deg) rotateY(-40deg);
 	box-shadow: +0.9vw 1vw 1.15vw #000000
 }
 nav{
