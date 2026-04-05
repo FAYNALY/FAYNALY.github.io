@@ -198,10 +198,11 @@ main{
 	color: #FFFFFF;
 	font-size: 1.50vw;
 }
-main>midi-visualizer{
+#myVisualizer{
 	border: solid #FFCCCC 0.5vw;
-	border-radius: 20vw;
+	border-radius: 1.5vw;
 	margin: 2vw;
+	height: 10vw;
 }
 .triSec{
 	display:flex;
@@ -434,7 +435,7 @@ main>midi-visualizer{
 	border-radius: 2vw;
 	padding: 1%;
 }
-.audioSample>audio,.audioSample>midi-visualizer{
+audio,midi-player{
 	display:flex;
 	flex-flow: row nowrap;
     position: relative;
