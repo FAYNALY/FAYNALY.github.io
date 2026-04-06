@@ -198,12 +198,6 @@ main{
 	color: #FFFFFF;
 	font-size: 1.50vw;
 }
-#myVisualizer{
-	border: solid #FFCCCC 0.5vw;
-	border-radius: 1.5vw;
-	margin: 2vw;
-	height: 10vw;
-}
 .triSec{
 	display:flex;
 	flex-flow: row wrap;
