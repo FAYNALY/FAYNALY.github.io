@@ -68,4 +68,4 @@ const Main = {
         "Guardian midi",
         "Laugh Track midi"
     ]
-}
+}, mid=true;
