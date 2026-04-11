@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6{
 }
 body{
     background-color: #000088;
-	background-image: url("./IMG/BGs/MainBg.png");
+	background-image: url("IMG/BGs/MainBg.png");
     background-size: 100vw;
     background-position: top;
 	background-repeat: no-repeat;
@@ -104,17 +104,17 @@ header>*{
     border-radius: 50%;
 }
 header>#R-ico{
-    background-image: url("./IMG/Users/RIco.png");
+    background-image: url("IMG/Users/RIco.png");
 	transform: translate(-5vw,0.5vw) scale(65%) rotateZ(-10deg) rotateY(+40deg);
 	box-shadow: -0.9vw 1vw 1.15vw #000000
 }
 header>#F-ico{
-    background-image: url("./IMG/Users/FIco.png");
+    background-image: url("IMG/Users/FIco.png");
 	transform: translate(0, 0.5vw);
 	box-shadow: 0vw 1vw 1.15vw #000000
 }
 header>#Y-ico{
-    background-image: url("./IMG/Users/YIco.png");
+    background-image: url("IMG/Users/YIco.png");
 	transform: translate(+5vw,0.5vw) scale(65%) rotateZ(+10deg) rotateY(-40deg);
 	box-shadow: +0.9vw 1vw 1.15vw #000000
 }
