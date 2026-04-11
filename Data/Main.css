@@ -261,7 +261,7 @@ main{
 .triSec a>img{
 	display:flex;
 	flex-flow: row nowrap;
-	transform: translate(1vw, -0.8vw) scale(100%);
+	transform: translate(1vw, 0.8vw) scale(100%);
 	width: 3vw;
 	height: 3vw;
 	border-radius:20px
