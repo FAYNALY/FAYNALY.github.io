@@ -84,14 +84,23 @@ header{
     max-width: 100%;
 	display: flex;
     position: relative;
+}
+header>*{
+	height: 25vw;
+    min-height: 25vw%;
+    max-height: 25vw%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+	display: flex;
+    position: relative;
     flex-flow: row wrap;
     background-size: 100%;
 	justify-content: center;
 	color: #ffffff;
 	border-top: 1vw #000088 solid;
-
 }
-header>*{
+.ico>*{
 	width: 100%;
 	display: flex;
     position: relative;
@@ -103,19 +112,19 @@ header>*{
     border: 0.5vw white solid;
     border-radius: 50%;
 }
-header>#R-ico{
+.ico>#R-ico{
     background-image: url("IMG/Users/RIco.png");
-	transform: translate(-5vw,0.5vw) scale(65%) rotateZ(-10deg) rotateY(+40deg);
+	transform: translate(-5vw,2vw) scale(65%) rotateZ(-10deg) rotateY(+40deg);
 	box-shadow: -0.9vw 1vw 1.15vw #000000
 }
-header>#F-ico{
+.ico>#F-ico{
     background-image: url("IMG/Users/FIco.png");
-	transform: translate(0, 0.5vw);
+	transform: translate(0VW, 2vw);
 	box-shadow: 0vw 1vw 1.15vw #000000
 }
-header>#Y-ico{
+.ico>#Y-ico{
     background-image: url("IMG/Users/YIco.png");
-	transform: translate(+5vw,0.5vw) scale(65%) rotateZ(+10deg) rotateY(-40deg);
+	transform: translate(+5vw,2vw) scale(65%) rotateZ(+10deg) rotateY(-40deg);
 	box-shadow: +0.9vw 1vw 1.15vw #000000
 }
 nav{
