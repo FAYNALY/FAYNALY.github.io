@@ -1,4 +1,4 @@
-const Main = {
+const mid=true, Main = {
     "Mine": {
         "Lists": {
             "DR the un happy few": [
@@ -68,4 +68,4 @@ const Main = {
         "Guardian midi",
         "Laugh Track midi"
     ]
-}, mid=true;
+};
