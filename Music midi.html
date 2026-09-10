@@ -28,6 +28,7 @@
 		<aside>
 			<h3>Credit if you use at: <br> https:www.youtube.com/c/FAYNALY</h3>
 		</aside>
+		<midi-visualizer type="piano-roll" id="Midi"></midi-visualizer>
 		<main>
 			<aside>
 				<section id="Menu">
@@ -40,6 +41,10 @@
 			<h5>@FAYNALY</h5>
 			<h6>FayNaly.set@gmail.com</h6>
 		</footer>
+		<dir id="player">
+			<midi-player id="playerAudio" visualizer="#Midi" src="./MIDI/${PthLists[i]}.mid" sound-font>Your browser does not support the midi element.</midi-player>
+			<lable id="playerName"></lable>
+		</dir>
 	</body>
 <script src="./MIDI/MIDI.js"></script>
 <script src="./Data/Music.js"></script>

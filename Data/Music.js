@@ -1,10 +1,63 @@
-const mainMenu = document.getElementById("Menu"), mainSecc = document.getElementById("Musi"), audios = document.querySelectorAll("audio");
-var PthLists=[], Mainsecths = Object.keys( Main );
+const
+	mainMenu = document.getElementById("Menu"),
+	mainSecc = document.getElementById("Musi"),
+	player = document.getElementById("player"),
+	playerAudio = document.getElementById("playerAudio"),
+	playerName = document.getElementById("playerName"),
+	MusBtn = document.getElementsByClassName("MusBtn");
+var last, PthLists=[], Mainsecths = Object.keys( Main );
 function Lvs(inst1, inst2) {
 	for (let PthLv of Object.keys( inst1 )) {
 		let PthSc=inst1[PthLv], MLName_1 = PthLv, cosPrev = "";
 		if (!inst2||inst2=="") { cosPrev=""; } else { cosPrev=inst2+'/'; } 
 		if (Object(PthSc) === PthSc) { Lvs(PthSc,cosPrev+PthLv); } else if (PthSc.length>1) { PthLists.push(cosPrev+PthSc); } else { break; }
+	}
+}
+function selection(inst1,inst2)
+{
+	if (mid)
+	{
+		if (last!=inst2){
+			last = inst2;
+			playerAudio.stop();
+			playerAudio.src = `${inst1}`;
+			playerName.innerHTML = '♪-'+inst1.split('/').pop();
+			for (let i = 0; i<MusBtn.length; i++) {MusBtn[i].innerHTML="▶"}
+			last.innerHTML="♪"
+			playerAudio.start();
+		} else if (!playerAudio.playing) {
+			playerAudio.start();
+			last.innerHTML="♪"
+		} else {
+			tiempoPausado = playerAudio.currentTime; 
+			playerAudio.stop();
+			playerAudio.currentTime = tiempoPausado; 
+			player.style.animationName ="subPlayer"
+			player.style.bottom="-100"
+			last.innerHTML="■"
+		}
+	} 
+	else
+	{
+		if (last!=inst2){
+			last = inst2;
+			playerAudio.pause();
+			playerAudio.currentTime.value=0;
+			playerAudio.firstChild.src = `${inst1}`;
+			playerAudio.load();
+			playerName.innerHTML = '♪-'+inst1.split('/').pop();
+			for (let i = 0; i<MusBtn.length; i++) {MusBtn[i].innerHTML="▶"}
+			last.innerHTML="♪"
+			playerAudio.play();
+		} else if (playerAudio.paused) {
+			playerAudio.play();
+			last.innerHTML="♪"
+		} else {
+			playerAudio.pause();
+			player.style.animationName ="subPlayer"
+			player.style.bottom="-100"
+			last.innerHTML="■"
+		}
 	}
 }
 Lvs(Main);
@@ -28,21 +81,15 @@ for (let i=0; PthLists.length>i; i++) {
 		if (pthSec[j]==pthSec[loe-1]) {
 			pinch = document.createElement('div');
 			pinch.classList="audioSample"
-			if (mid){
+			if (mid){/*MIDI*/
 				pinch.innerHTML=`
-<a href="./MIDI/${PthLists[i]}.mid" download><img src="./Data/IMG/Ico/MD.png"></a>
-<lable>${pthSec[j]}</lable>
-<midi-player src="./MIDI/${PthLists[i]}.mid" sound-font>
-</midi-player>
+<a href="./MP3/${PthLists[i]}.mid" download><img src="./Data/IMG/Ico/MD.png"></a>
+<lable><button class="MusBtn" onclick="selection('./MIDI/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mid',this)">▶</button>${pthSec[j]}</lable>
 `				;
-			}else{
+			}else{/*MP3*/
 				pinch.innerHTML=`
 <a href="./MP3/${PthLists[i]}.mp3" download><img src="./Data/IMG/Ico/MD.png"></a>
-<lable>${pthSec[j]}</lable>
-<audio controls>
-	<source src="./MP3/${PthLists[i]}.mp3" type="audio/mpeg">
-	Your browser does not support the audio element.
-</audio>
+<lable><button class="MusBtn" onclick="selection('./MP3/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mp3',this)">▶</button>${pthSec[j]}</lable>
 `				;
 			}
 			pthnde.lastChild.lastChild.append(pinch);
@@ -68,12 +115,12 @@ function BtnSH(inst1, inst2) {
 			btn2.style.display = "flex";
 		} else { btn2.style.display = "none"; }
 	}
-	audios.forEach(aEl => { aEl.pause(); });
 }
-audios.forEach(aEl => { 
-	aEl.addEventListener("play", function () { 
-		audios.forEach(el => {
-			if (el !== this) { el.pause(); }
-		});
-	});
+playerAudio.addEventListener('play', () => {
+	player.style.animationName ="player"
+	player.style.bottom="0"
+	last.innerHTML="♪"
+});
+playerAudio.addEventListener('stop', () => {
+	last.innerHTML="■"
 });
