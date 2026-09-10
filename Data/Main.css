@@ -536,9 +536,11 @@ aside>*>*{
 	height: 2vw;
     font-size: 2vw;
 	color: #D52563;
+	justify-content: center;
+	align-items: center;
 	background-color: #00000000;
-	border: 0px;
 	border-radius: 1vw;
+	border: 0px;
 }
 #player{
 	display: flex;
