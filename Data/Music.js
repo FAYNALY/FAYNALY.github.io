@@ -4,6 +4,7 @@ const
 	player = document.getElementById("player"),
 	playerAudio = document.getElementById("playerAudio"),
 	playerName = document.getElementById("playerName"),
+	playerMidi = document.getElementById("Midi"),
 	MusBtn = document.getElementsByClassName("MusBtn");
 var last, PthLists=[], Mainsecths = Object.keys( Main );
 function Lvs(inst1, inst2) {
@@ -138,6 +139,7 @@ if (mid)
 		player.style.animationName ="player"
 		player.style.bottom="0"
 		last.innerHTML="♪"
+		visualizerMidi.load();
 	});
 } else 
 {
