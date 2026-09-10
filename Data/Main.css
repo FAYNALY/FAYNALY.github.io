@@ -573,10 +573,11 @@ aside>*>*{
 }
 #MidBg{
 	background: #444444;
+	min-height: 8vh;
+	min-width: 98vw;
 	border-radius: 1vw;
 }
 #Midi .piano-roll-visualizer {
-	min-height: 8vh;
 	background: #444444;
 	border: 1vw solid #FFFFFF;
 	border-radius: 1vw;
