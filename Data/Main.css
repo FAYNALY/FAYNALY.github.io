@@ -58,6 +58,14 @@
   from	{width:16vw; height:16vw; border-radius: 40%;}
   to	{width:15vw; height:15vw; border-radius: 50%;}
 }
+@keyframes btnplay {
+  from	{border-radius:8%;}
+  to	{border-radius:50%;}
+}
+@keyframes btnplayRever {
+  from	{border-radius:50%;}
+  to	{border-radius:8%;}
+}
 @media (max-width: 1000px) {
 	main{
 		font-size: 4vw !important;
@@ -566,7 +574,7 @@ aside>*>*{
 	padding: 0.3%;
 	margin: 0;
 }
-.audioSample>a{
+.audioSample a{
 	display:flex;
 	flex-flow: row nowrap;
 	width: 2vw;
@@ -577,23 +585,26 @@ aside>*>*{
 	text-decoration: none;
 	cursor: pointer;
 	animation-duration: 0.2s;
+	margin-left: 0.5vw;
+	margin-right: 0.5vw;
 }
-.audioSample>a:hover{
+.audioSample a:hover{
 	transform: scale(120%);
 	
 	animation-name: Sizmax;
 }
-.audioSample>a>img{
+.audioSample img{
 	display:flex;
 	flex-flow: row nowrap;
 	transform: translate(-0vw, -0.2vw) scale(100%);
 	width: 3vw!important;
 	height: 3vw!important;
-	margin-left: 1vw;
 	border-radius:20px;
 	z-index: 2;
+	padding: 0;
+	margin: 0;
 }
-.audioSample>lable{
+.audioSample lable{
 	display:flex;
 	flex-flow: row nowrap;
     position: relative;
@@ -602,31 +613,43 @@ aside>*>*{
 	text-align: left;
 	border-radius: 2vw;
 	padding: 1%;
-	margin-left: 1vw;
-	margin-right: 1vw;
+	margin-left: 0.5vw;
+	margin-right: 0.5vw;
 }
-.audioSample>lable>button{
+.audioSample button{
 	display:flex;
 	flex-flow: row nowrap;
     position: relative;
-	width: 2vw;
-	height: 2vw;
+	background-color: #2244AA77;
+	height: 4vw;
+	width: 4vw;
     font-size: 2vw;
 	color: #D52563;
 	justify-content: center;
 	align-items: center;
-	background-color: #00000000;
-	border-radius: 1vw;
-	border: 0px;
+	padding:0;
+	margin-left: 0.5vw;
+	margin-right: 4vw;
+	border-radius: 50%;
+	border: none;
+	
+	animation-name: btnplay;
+	animation-duration: 0.2s;
+}
+.audioSample button:hover{
+	color: #FFFFFF;
+	border-radius: 8%;
+	
+	animation-name: btnplayRever;
+	animation-duration: 0.2s;
 }
 #player{
 	display: flex;
     position: fixed;
-	width: 90%;
+	width: 100%;
 	left: 0;
 	bottom:-100;
 	background-color: #000044;
-	border-radius: 0vw 1vw 0vw 0vw;
 	border: 0px;
 	padding: 0;
 	margin: 0;
@@ -641,12 +664,20 @@ aside>*>*{
 	border: 0px;
 	padding: 0;
 	margin: 0;
+	margin-left:1vw;
 }
 #playerName{
+	display:flex;
+	flex-flow: row nowrap;
+    position: relative;
+	flex: 1;
+	background-color: #2244AA88;
+	text-align: left;
+	border-radius: 2vw 0vw 0vw 2vw;
 	color: #FFFFFF;
+	padding: 1%;
 	margin:auto;
-	margin-left:2vw;
-	margin-right:2vw;
+	margin-left:1vw;
 }
 audio,midi-player{
 	display:flex;
