@@ -513,6 +513,7 @@ aside>*>*{
 	transform: translate(-0vw, -0.2vw) scale(100%);
 	width: 3vw!important;
 	height: 3vw!important;
+	margin-left: 1vw;
 	border-radius:20px;
 	z-index: 2;
 }
@@ -520,13 +521,13 @@ aside>*>*{
 	display:flex;
 	flex-flow: row nowrap;
     position: relative;
-	flex: 7;
+	flex: 1;
 	background-color: #2244AA88;
 	text-align: left;
 	border-radius: 2vw;
 	padding: 1%;
-	margin-left: 2vw;
-	margin-right: 2vw;
+	margin-left: 1vw;
+	margin-right: 1vw;
 }
 .audioSample>lable>button{
 	display:flex;
@@ -545,11 +546,11 @@ aside>*>*{
 #player{
 	display: flex;
     position: fixed;
-	width: 98vw;
+	width: 90%;
 	left: 0;
 	bottom:-100;
 	background-color: #000044;
-	border-radius: 0vw 1vw 1vw 0vw;
+	border-radius: 0vw 1vw 0vw 0vw;
 	border: 0px;
 	padding: 0;
 	margin: 0;
