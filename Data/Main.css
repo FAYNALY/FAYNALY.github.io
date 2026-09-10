@@ -59,12 +59,12 @@
   to	{width:15vw; height:15vw; border-radius: 50%;}
 }
 @keyframes btnplay {
-  from	{border-radius:8%;}
-  to	{border-radius:50%;}
+  from	{border-radius:0.2vw;}
+  to	{border-radius:2vw;}
 }
 @keyframes btnplayRever {
-  from	{border-radius:50%;}
-  to	{border-radius:8%;}
+  from	{border-radius:2vw;}
+  to	{border-radius:0.2vw;}
 }
 @media (max-width: 1000px) {
 	main{
@@ -574,7 +574,7 @@ aside>*>*{
 	padding: 0.3%;
 	margin: 0;
 }
-.audioSample a{
+.audioSample>a{
 	display:flex;
 	flex-flow: row nowrap;
 	width: 2vw;
@@ -588,12 +588,12 @@ aside>*>*{
 	margin-left: 0.5vw;
 	margin-right: 0.5vw;
 }
-.audioSample a:hover{
+.audioSample>a:hover{
 	transform: scale(120%);
 	
 	animation-name: Sizmax;
 }
-.audioSample img{
+.audioSample>a>img{
 	display:flex;
 	flex-flow: row nowrap;
 	transform: translate(-0vw, -0.2vw) scale(100%);
@@ -604,23 +604,27 @@ aside>*>*{
 	padding: 0;
 	margin: 0;
 }
-.audioSample lable{
+.audioSample>lable{
 	display:flex;
 	flex-flow: row nowrap;
     position: relative;
 	flex: 1;
 	background-color: #2244AA88;
 	text-align: left;
-	border-radius: 2vw;
 	padding: 1%;
 	margin-left: 0.5vw;
 	margin-right: 0.5vw;
+	border-radius: 2vw;
+	border: none;
+	
+	animation-name: btnplay;
+	animation-duration: 0.2s;
 }
-.audioSample button{
+.audioSample>button{
 	display:flex;
 	flex-flow: row nowrap;
     position: relative;
-	background-color: #2244AA77;
+	background-color: #2244AA88;
 	height: 4vw;
 	width: 4vw;
     font-size: 2vw;
@@ -630,18 +634,21 @@ aside>*>*{
 	padding:0;
 	margin-left: 0.5vw;
 	margin-right: 4vw;
-	border-radius: 50%;
+	border-radius: 2vw;
 	border: none;
 	
 	animation-name: btnplay;
 	animation-duration: 0.2s;
 }
-.audioSample button:hover{
+.audioSample>button:hover,
+.audioSample>lable:hover,
+.audioSample:has(lable:hover)>button,
+.audioSample:has(button:hover)>lable{
 	color: #FFFFFF;
-	border-radius: 8%;
+	border-radius: 0.5vw;
+	background-color: #4444BBCC;
 	
 	animation-name: btnplayRever;
-	animation-duration: 0.2s;
 }
 #player{
 	display: flex;
