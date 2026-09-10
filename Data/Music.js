@@ -126,15 +126,15 @@ function BtnSH(inst1, inst2) {
 }
 if (mid)
 {
-	player.addEventListener('start', () => {
+	playerAudio.addEventListener('start', () => {
 		player.style.animationName ="player"
 		player.style.bottom="0"
 		last.innerHTML="♪"
 	});
-	player.addEventListener('stop', () => {
+	playerAudio.addEventListener('stop', () => {
 		last.innerHTML="■"
 	});
-	player.addEventListener('load', () => {
+	playerAudio.addEventListener('load', () => {
 		player.style.animationName ="player"
 		player.style.bottom="0"
 		last.innerHTML="♪"
