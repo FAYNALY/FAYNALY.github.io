@@ -83,7 +83,7 @@ for (let i=0; PthLists.length>i; i++) {
 			pinch.classList="audioSample"
 			if (mid){/*MIDI*/
 				pinch.innerHTML=`
-<a href="./MP3/${PthLists[i]}.mid" download><img src="./Data/IMG/Ico/MD.png"></a>
+<a href="./MIDI/${PthLists[i]}.mid" download><img src="./Data/IMG/Ico/MD.png"></a>
 <lable><button class="MusBtn" onclick="selection('./MIDI/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mid',this)">▶</button>${pthSec[j]}</lable>
 `				;
 			}else{/*MP3*/
