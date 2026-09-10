@@ -139,6 +139,7 @@ if (mid)
 		player.style.animationName ="player"
 		player.style.bottom="0"
 		last.innerHTML="♪"
+		visualizerMidi.src = playerAudio.src;
 		visualizerMidi.load();
 	});
 } else 
