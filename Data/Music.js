@@ -140,9 +140,15 @@ if (mid) {
 		last.innerHTML="♪"
 		visualizerMidi.src = playerAudio.src;
 		visualizerMidi.load();
+		playerAudio.start();
 	});
 	midCtrlSet.addEventListener('change', (event) => {
 		playerMidi.setAttribute('type', event.target.value);
+		if (event.target.value=="staff"){
+			playerMidi.firstChild.style.backgroundColor="#ffffff"
+		} else {
+			playerMidi.firstChild.style.backgroundColor=""
+		}
 	});
 } else {
 	playerAudio.addEventListener('play', () => {
