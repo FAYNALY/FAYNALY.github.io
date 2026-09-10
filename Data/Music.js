@@ -5,6 +5,7 @@ const
 	playerAudio = document.getElementById("playerAudio"),
 	playerName = document.getElementById("playerName"),
 	playerMidi = document.getElementById("Midi"),
+	midCtrlSet = document.getElementById("midCtrlSet"),
 	MusBtn = document.getElementsByClassName("MusBtn");
 var last, PthLists=[], Mainsecths = Object.keys( Main );
 function Lvs(inst1, inst2) {
@@ -153,3 +154,6 @@ if (mid)
 		last.innerHTML="■"
 	});
 }
+midCtrlSet.addEventListener('change', (event) => {
+	playerMidi.setAttribute('type', event.target.value);
+});

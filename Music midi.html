@@ -28,9 +28,18 @@
 		<aside>
 			<h3>Credit if you use at: <br> https:www.youtube.com/c/FAYNALY</h3>
 		</aside>
-		<dir id="MidBg">
+		<div id="midCtrl">
+			<h3>Score layout
+				<select id="midCtrlSet">
+					<option value="piano-roll"><h3>Piano Roll</h3></option>
+					<option value="waterfall"><h3>Waterfall</h3></option>
+					<option value="staff"><h3>Staff Notation</h3></option>
+				</select>
+			</h3>
+		</div>
+		<div id="midBg">
 			<midi-visualizer type="piano-roll" id="Midi"></midi-visualizer>
-		</dir>
+		</div>
 		<main>
 			<aside>
 				<section id="Menu">
@@ -46,10 +55,10 @@
 			<br>
 			<br>
 		</footer>
-		<dir id="player">
+		<div id="player">
 			<midi-player id="playerAudio" visualizer="#Midi" src="" sound-font>Your browser does not support the midi element.</midi-player>
 			<lable id="playerName"></lable>
-		</dir>
+		</div>
 	</body>
 <script src="./MIDI/MIDI.js"></script>
 <script src="./Data/Music.js"></script>

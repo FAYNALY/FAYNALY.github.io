@@ -50,6 +50,14 @@
   from	{bottom:0;}
   to	{bottom:-100;}
 }
+@keyframes ico {
+  from	{width:15vw; height:15vw; border-radius: 50%;}
+  to	{width:16vw; height:16vw; border-radius: 40%;}
+}
+@keyframes icoRever {
+  from	{width:16vw; height:16vw; border-radius: 40%;}
+  to	{width:15vw; height:15vw; border-radius: 50%;}
+}
 @media (max-width: 1000px) {
 	main{
 		font-size: 4vw !important;
@@ -81,7 +89,7 @@
 	}
 }
 button, a, body, lable, p,
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6, select{
 	font-family: 'Times New Roman', Times, serif;
 }
 body{
@@ -94,10 +102,6 @@ body{
     min-height: 50%;
     margin: 0;
     padding: 0;
-	z-index:-1;
-}
-body>*{
-	z-index:0;
 }
 header{
 	height: 25vw;
@@ -124,7 +128,7 @@ header>*{
 	color: #ffffff;
 	border-top: 1vw #000088 solid;
 }
-.ico>*{
+.ico>div{
 	width: 100%;
 	display: flex;
     position: relative;
@@ -135,6 +139,13 @@ header>*{
 	height: 15vw;
     border: 0.5vw white solid;
     border-radius: 50%;
+	animation-name: icoRever;
+	animation-duration: 0.2s;
+}
+.ico>div:hover{
+	animation-name: ico;
+    width: 16vw; height: 16vw;
+    border-radius: 40%;
 }
 .ico>#R-ico{
     background-image: url("IMG/Users/RIco.png");
@@ -150,6 +161,17 @@ header>*{
     background-image: url("IMG/Users/YIco.png");
 	transform: translate(+5vw,2vw) scale(65%) rotateZ(+10deg) rotateY(-40deg);
 	box-shadow: +0.9vw 1vw 1.15vw #000000
+}
+.ico>#R-ico:active{
+    border: 0.5vw hotpink solid;
+    background-image: url("IMG/Users/NULLICO.png");
+}
+.ico>#F-ico:active{
+    border: 0.5vw gray solid;
+}
+.ico>#Y-ico:active{
+    border: 0.5vw hotpink solid;
+    background-image: url("IMG/Users/NULLICO.png");
 }
 nav{
 	width: 100%;
@@ -233,8 +255,8 @@ aside{
     background-color: #0000AA;
 	color: #FF0066FF;
 	font-size: 1.5vw;
-	padding: 0%;
-	margin: 0%;
+	padding: 0;
+	margin: 0;
 }
 aside>*{
     background-color: #00000000;
@@ -244,11 +266,11 @@ aside>*{
 	justify-content: center;
 	align-content:center;
 	text-align:center;
-	padding: 0%;
+	padding: 0;
 	margin: 0% auto;
 }
 aside>*>*{
-	padding: 0%;
+	padding: 0;
 	margin: 0% auto;
 }
 .infosec{
@@ -271,8 +293,8 @@ aside>*>*{
     background-color: #000055;
 	color: #FFFFFF;
 	font-size: 1.50vw;
-	padding: 0%;
-	margin: 0%;
+	padding: 0;
+	margin: 0;
 }
 .triSec>*{
 	display: flex;
@@ -316,7 +338,7 @@ aside>*>*{
 	align-content:center;
 	text-align: center;
 	padding: 1%;
-	margin: 0%;
+	margin: 0;
 }
 .triSec a:hover{
 	transform: scale(120%);
@@ -344,14 +366,69 @@ aside>*>*{
     position: relative;
 	flex-flow: row wrap;
 	justify-content: center;
-	align-content:center;
-	text-align:center;
+	align-content: center;
+	text-align: center;
     background-color: #000055;
 	color: #FFFFFF;
 	font-size: 1.50vw;
-	padding: 0%;
-	margin: 0%;
+	padding: 0;
+	margin: 0;
 }
+#midCtrl{
+	width: 100%;
+	display: flex;
+    position: relative;
+	flex-flow: row wrap;
+    background-color: #000055;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	font-size: 1.5vw;
+	color: #FFFFFF;
+	padding: 0;
+	padding-top: 1vw;
+	margin: 0;
+}
+#midCtrlSet{
+    background-color: #000055;
+	border: solid #FFFFFF 0.25vw;
+	padding: 0;
+	font-size: 1.5vw;
+	color: #FF0066FF;
+	border-radius: 2vw;
+}
+#midBg{
+	background: #666666;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+#Midi .piano-roll-visualizer {
+	background: #FFFFFF;
+	width: 100%;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+#Midi svg rect.note{ stroke-width: 0; opacity: 0.6; }
+#Midi svg rect.note[data-instrument="0"] { fill: #888888; stroke: #FFFFFF; }
+#Midi svg rect.note[data-instrument="1"] { fill: #00FF00; stroke: #00FF00; }
+#Midi svg rect.note[data-instrument="2"] { fill: #0000FF; stroke: #0000FF; }
+#Midi svg rect.note[data-instrument="3"] { fill: #FF0000; stroke: #FF0000; }
+#Midi svg rect.note[data-instrument="4"] { fill: #FFFF00; stroke: #FFFF00; }
+#Midi svg rect.note[data-instrument="5"] { fill: #FF8800; stroke: #FF8800; }
+#Midi svg rect.note[data-instrument="6"] { fill: #00FFFF; stroke: #00FFFF; }
+#Midi svg rect.note[data-instrument="7"] { fill: #FF00FF; stroke: #FF00FF; }
+#Midi svg rect.note[data-instrument="8"] { fill: #800080; stroke: #800080; }
+#Midi svg rect.note[data-is-drum="true"] { fill: #222222; stroke: #888888; opacity: 0.6; }
+#Midi svg rect.note[data-instrument="10"]{ fill: #00AA00; stroke: #00AA00; }
+#Midi svg rect.note[data-instrument="11"]{ fill: #0000AA; stroke: #0000AA; }
+#Midi svg rect.note[data-instrument="12"]{ fill: #AA0000; stroke: #AA0000; }
+#Midi svg rect.note[data-instrument="13"]{ fill: #AAAA00; stroke: #AAAA00; }
+#Midi svg rect.note[data-instrument="14"]{ fill: #00AAAA; stroke: #00AAAA; }
+#Midi svg rect.note[data-instrument="15"]{ fill: #AA00AA; stroke: #AA00AA; }
+#Midi svg rect.note.active { stroke-width: 2; fill: #FFFFFF; opacity: 1; }
+#Midi svg rect.note[data-is-drum="true"].active{ stroke-width: 2; fill: #000000; opacity: 1; }
 #Menu{
 	width: 100%;
 	display: flex;
@@ -360,8 +437,8 @@ aside>*>*{
 	justify-content: center;
 	align-content: center;
     background-color: #000055;
-	padding: 0%;
-	margin: 0%;
+	padding: 0;
+	margin: 0;
 }
 #Menu>button{
 	width: 100%;
@@ -375,7 +452,7 @@ aside>*>*{
 	text-align: center;
 	font-size: 2vw;
 	flex:1;
-	padding: 0%;
+	padding: 0;
 	margin: 1vw;
 	border: solid #5555FF 1vw;
 	border-radius: 5vw;
@@ -444,7 +521,7 @@ aside>*>*{
 	flex-flow: column nowrap;
 	justify-content: center;
 	align-content: center;
-	padding: 0%;
+	padding: 0;
 	margin: 0% auto;
 }
 .audioCluster>button{
@@ -458,7 +535,7 @@ aside>*>*{
 	border-radius: 5vw;
 	border: solid #5555FF 1vw;
 	padding: 0.5vw;
-	margin: 0%;
+	margin: 0;
 
 	animation-name: ClusterBroudsRever;
 	animation-duration: 0.2s;
@@ -488,7 +565,7 @@ aside>*>*{
 	color: #FFFFFF;
 	font-size: 1.5vw;
 	padding: 0.3%;
-	margin: 0%;
+	margin: 0;
 }
 .audioSample>a{
 	display:flex;
@@ -572,39 +649,6 @@ aside>*>*{
 	margin-left:2vw;
 	margin-right:2vw;
 }
-#MidBg{
-	background: #444444;
-	min-height: 8vh;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-}
-#Midi .piano-roll-visualizer {
-	background: #444444;
-	width: 100%;
-	border: none;
-	padding: 0;
-	margin: 0;
-}
-#Midi svg rect.note{ stroke-width: 0; opacity: 0.6; }
-#Midi svg rect.note[data-instrument="0"] { fill: #FFFFFF; stroke: #FFFFFF; }
-#Midi svg rect.note[data-instrument="1"] { fill: #00FF00; stroke: #00FF00; }
-#Midi svg rect.note[data-instrument="2"] { fill: #0000FF; stroke: #0000FF; }
-#Midi svg rect.note[data-instrument="3"] { fill: #FF0000; stroke: #FF0000; }
-#Midi svg rect.note[data-instrument="4"] { fill: #FFFF00; stroke: #FFFF00; }
-#Midi svg rect.note[data-instrument="5"] { fill: #FF8800; stroke: #FF8800; }
-#Midi svg rect.note[data-instrument="6"] { fill: #00FFFF; stroke: #00FFFF; }
-#Midi svg rect.note[data-instrument="7"] { fill: #FF00FF; stroke: #FF00FF; }
-#Midi svg rect.note[data-instrument="8"] { fill: #800080; stroke: #800080; }
-#Midi svg rect.note[data-is-drum="true"] { fill: #888888; stroke: #888888; opacity: 0.6; }
-#Midi svg rect.note[data-instrument="10"]{ fill: #00AA00; stroke: #00AA00; }
-#Midi svg rect.note[data-instrument="11"]{ fill: #0000AA; stroke: #0000AA; }
-#Midi svg rect.note[data-instrument="12"]{ fill: #AA0000; stroke: #AA0000; }
-#Midi svg rect.note[data-instrument="13"]{ fill: #AAAA00; stroke: #AAAA00; }
-#Midi svg rect.note[data-instrument="14"]{ fill: #00AAAA; stroke: #00AAAA; }
-#Midi svg rect.note[data-instrument="15"]{ fill: #AA00AA; stroke: #AA00AA; }
-#Midi svg rect.note.active { stroke-width: 2; fill: #FFFFFF; opacity: 1; }
-#Midi svg rect.note[data-is-drum="true"].active{ fill: #000000; opacity: 1; }
 audio,midi-player{
 	display:flex;
 	flex-flow: row nowrap;
