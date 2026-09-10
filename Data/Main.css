@@ -172,14 +172,14 @@ header>*{
 }
 .ico>#R-ico:active{
     border: 0.5vw hotpink solid;
-    background-image: url("IMG/Users/NULLICO.png");
+    background-image: url("IMG/Users/NullICO.png");
 }
 .ico>#F-ico:active{
     border: 0.5vw gray solid;
 }
 .ico>#Y-ico:active{
     border: 0.5vw hotpink solid;
-    background-image: url("IMG/Users/NULLICO.png");
+    background-image: url("IMG/Users/NullICO.png");
 }
 nav{
 	width: 100%;
