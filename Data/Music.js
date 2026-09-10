@@ -139,7 +139,6 @@ if (mid) {
 		player.style.bottom="0"
 		last.innerHTML="♪"
 		playerMidi.src = playerAudio.src;
-		playerMidi.load();
 		playerAudio.start();
 	});
 	playerMidi.addEventListener('load', () => {
