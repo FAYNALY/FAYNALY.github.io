@@ -572,11 +572,31 @@ aside>*>*{
 	margin-right:2vw;
 }
 #Midi .piano-roll-visualizer {
-	background: #FFFFFF;
-	border: 0;
-	margin: 4px;
-	margin: 1vw;
+	background: #444444;
+	border: 1vw solid #FFFFFF;
+	min-height: 8vh;
+	padding: 0;
+	margin: 0;
 }
+#Midi svg rect.note{ opacity: 1; stroke-width: 0; }
+#Midi svg rect.note[data-instrument="0"]{ fill: #FFFFFF; }
+#Midi svg rect.note[data-instrument="1"]{ fill: #00FF00; }
+#Midi svg rect.note[data-instrument="2"]{ fill: #0000FF; }
+#Midi svg rect.note[data-instrument="3"]{ fill: #FF0000; }
+#Midi svg rect.note[data-instrument="4"]{ fill: #FFFF00; }
+#Midi svg rect.note[data-instrument="5"]{ fill: #FF8800; }
+#Midi svg rect.note[data-instrument="6"]{ fill: #00FFFF; }
+#Midi svg rect.note[data-instrument="7"]{ fill: #FF00FF; }
+#Midi svg rect.note[data-instrument="8"]{ fill: #800080; }
+#Midi svg rect.note[data-is-drum="true"]{ fill: #888888; opacity: 0.8; }
+#Midi svg rect.note[data-instrument="10"]{ fill: #00AA00; }
+#Midi svg rect.note[data-instrument="11"]{ fill: #0000AA; }
+#Midi svg rect.note[data-instrument="12"]{ fill: #AA0000; }
+#Midi svg rect.note[data-instrument="13"]{ fill: #AAAA00; }
+#Midi svg rect.note[data-instrument="14"]{ fill: #00AAAA; }
+#Midi svg rect.note[data-instrument="15"]{ fill: #AA00AA; }
+#Midi svg rect.note.active { stroke-width: 2; fill: #FFFFFF; opacity: 0.5; }
+#Midi svg rect.note[data-is-drum="true"].active{ fill: #000000; opacity: 0.4; }
 audio,midi-player{
 	display:flex;
 	flex-flow: row nowrap;
