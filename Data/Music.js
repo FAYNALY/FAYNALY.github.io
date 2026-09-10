@@ -23,10 +23,14 @@ function selection(inst1,inst2)
 			playerAudio.src = `${inst1}`;
 			playerName.innerHTML = '♪-'+inst1.split('/').pop();
 			for (let i = 0; i<MusBtn.length; i++) {MusBtn[i].innerHTML="▶"}
-			last.innerHTML="♪"
 			playerAudio.start();
+			player.style.animationName ="player"
+			player.style.bottom="0"
+			last.innerHTML="♪"
 		} else if (!playerAudio.playing) {
 			playerAudio.start();
+			player.style.animationName ="player"
+			player.style.bottom="0"
 			last.innerHTML="♪"
 		} else {
 			tiempoPausado = playerAudio.currentTime; 
@@ -47,10 +51,14 @@ function selection(inst1,inst2)
 			playerAudio.load();
 			playerName.innerHTML = '♪-'+inst1.split('/').pop();
 			for (let i = 0; i<MusBtn.length; i++) {MusBtn[i].innerHTML="▶"}
-			last.innerHTML="♪"
 			playerAudio.play();
+			player.style.animationName ="player"
+			player.style.bottom="0"
+			last.innerHTML="♪"
 		} else if (playerAudio.paused) {
 			playerAudio.play();
+			player.style.animationName ="player"
+			player.style.bottom="0"
 			last.innerHTML="♪"
 		} else {
 			playerAudio.pause();
