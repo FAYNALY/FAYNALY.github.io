@@ -142,6 +142,9 @@ if (mid) {
 		visualizerMidi.load();
 		playerAudio.start();
 	});
+	visualizerMidi.addEventListener('load', () => {
+		playerAudio.start();
+	});
 	midCtrlSet.addEventListener('change', (event) => {
 		playerMidi.setAttribute('type', event.target.value);
 		if (event.target.value=="staff"){
