@@ -624,9 +624,9 @@ footer{
 	z-index:-1;
 }
 footer>*{
-	margin:0px;
-	color:#ffffff88;
     font-size: 1vw;
+	color:#ffffff88;
+	margin:0;
 }
 /*------*/
 .gris{color:#bbbbbb !important;}
