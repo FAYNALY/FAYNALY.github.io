@@ -91,12 +91,14 @@ for (let i=0; PthLists.length>i; i++) {
 			if (mid){/*MIDI*/
 				pinch.innerHTML=`
 <a href="./MIDI/${PthLists[i]}.mid" download><img src="./Data/IMG/Ico/MD.png"></a>
-<lable>${pthSec[j]}</lable><button class="MusBtn" onclick="selection('./MIDI/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mid',this)"> ▶</button>
+<lable onclick="selection('./MIDI/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mid',this.nextElementSibling)">${pthSec[j]}</lable>
+<button class="MusBtn" onclick="selection('./MIDI/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mid',this)"> ▶</button>
 `				;
 			}else{/*MP3*/
 				pinch.innerHTML=`
 <a href="./MP3/${PthLists[i]}.mp3" download><img src="./Data/IMG/Ico/MD.png"></a>
-<lable>${pthSec[j]}</lable><button class="MusBtn" onclick="selection('./MP3/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mp3',this)"> ▶</button>
+<lable onclick="selection('./MP3/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mp3',this.nextElementSibling)">${pthSec[j]}</lable>
+<button class="MusBtn" onclick="selection('./MP3/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mp3',this)"> ▶</button>
 `				;
 			}
 			pthnde.lastChild.lastChild.append(pinch);
