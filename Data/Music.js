@@ -116,11 +116,29 @@ function BtnSH(inst1, inst2) {
 		} else { btn2.style.display = "none"; }
 	}
 }
-playerAudio.addEventListener('play', () => {
-	player.style.animationName ="player"
-	player.style.bottom="0"
-	last.innerHTML="♪"
-});
-playerAudio.addEventListener('stop', () => {
-	last.innerHTML="■"
-});
+if (mid)
+{
+	player.addEventListener('start', () => {
+		player.style.animationName ="player"
+		player.style.bottom="0"
+		last.innerHTML="♪"
+	});
+	player.addEventListener('stop', () => {
+		last.innerHTML="■"
+	});
+	player.addEventListener('load', () => {
+		player.style.animationName ="player"
+		player.style.bottom="0"
+		last.innerHTML="♪"
+	});
+} else 
+{
+	playerAudio.addEventListener('play', () => {
+		player.style.animationName ="player"
+		player.style.bottom="0"
+		last.innerHTML="♪"
+	});
+	playerAudio.addEventListener('stop', () => {
+		last.innerHTML="■"
+	});
+}
