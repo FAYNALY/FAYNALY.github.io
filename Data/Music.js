@@ -138,11 +138,11 @@ if (mid) {
 		player.style.animationName ="player"
 		player.style.bottom="0"
 		last.innerHTML="♪"
-		visualizerMidi.src = playerAudio.src;
-		visualizerMidi.load();
+		playerMidi.src = playerAudio.src;
+		playerMidi.load();
 		playerAudio.start();
 	});
-	visualizerMidi.addEventListener('load', () => {
+	playerMidi.addEventListener('load', () => {
 		playerAudio.start();
 	});
 	midCtrlSet.addEventListener('change', (event) => {
