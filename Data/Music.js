@@ -15,16 +15,15 @@ function Lvs(inst1, inst2) {
 		if (Object(PthSc) === PthSc) { Lvs(PthSc,cosPrev+PthLv); } else if (PthSc.length>1) { PthLists.push(cosPrev+PthSc); } else { break; }
 	}
 }
-function selection(inst1,inst2)
-{
-	if (mid)
-	{
+Lvs(Main);
+function selection(inst1,inst2) {
+	if (mid) {
 		if (last!=inst2){
 			last = inst2;
 			playerAudio.stop();
 			playerAudio.src = `${inst1}`;
 			playerName.innerHTML = '♪-'+inst1.split('/').pop();
-			for (let i = 0; i<MusBtn.length; i++) {MusBtn[i].innerHTML="▶"}
+			for (let i = 0; i<MusBtn.length; i++) {MusBtn[i].innerHTML=" ▶"}
 			playerAudio.start();
 			player.style.animationName ="player"
 			player.style.bottom="0"
@@ -43,8 +42,7 @@ function selection(inst1,inst2)
 			last.innerHTML="■"
 		}
 	} 
-	else
-	{
+	else {
 		if (last!=inst2){
 			last = inst2;
 			playerAudio.pause();
@@ -52,7 +50,7 @@ function selection(inst1,inst2)
 			playerAudio.firstChild.src = `${inst1}`;
 			playerAudio.load();
 			playerName.innerHTML = '♪-'+inst1.split('/').pop();
-			for (let i = 0; i<MusBtn.length; i++) {MusBtn[i].innerHTML="▶"}
+			for (let i = 0; i<MusBtn.length; i++) {MusBtn[i].innerHTML=" ▶"}
 			playerAudio.play();
 			player.style.animationName ="player"
 			player.style.bottom="0"
@@ -70,7 +68,6 @@ function selection(inst1,inst2)
 		}
 	}
 }
-Lvs(Main);
 for (let i=0; Mainsecths.length>i; i++) {
 	let gefBtn = document.createElement('button');
 	gefBtn.setAttribute("onclick", `BtnSH('audioSection', 'hidshow_${Mainsecths[i]}'); BtnSH('audioList','');`);
@@ -94,12 +91,12 @@ for (let i=0; PthLists.length>i; i++) {
 			if (mid){/*MIDI*/
 				pinch.innerHTML=`
 <a href="./MIDI/${PthLists[i]}.mid" download><img src="./Data/IMG/Ico/MD.png"></a>
-<lable><button class="MusBtn" onclick="selection('./MIDI/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mid',this)">▶</button>${pthSec[j]}</lable>
+<lable>${pthSec[j]}</lable><button class="MusBtn" onclick="selection('./MIDI/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mid',this)"> ▶</button>
 `				;
 			}else{/*MP3*/
 				pinch.innerHTML=`
 <a href="./MP3/${PthLists[i]}.mp3" download><img src="./Data/IMG/Ico/MD.png"></a>
-<lable><button class="MusBtn" onclick="selection('./MP3/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mp3',this)">▶</button>${pthSec[j]}</lable>
+<lable>${pthSec[j]}</lable><button class="MusBtn" onclick="selection('./MP3/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mp3',this)"> ▶</button>
 `				;
 			}
 			pthnde.lastChild.lastChild.append(pinch);
@@ -126,15 +123,14 @@ function BtnSH(inst1, inst2) {
 		} else { btn2.style.display = "none"; }
 	}
 }
-if (mid)
-{
+playerAudio.addEventListener('stop', () => {
+	last.innerHTML="■"
+});
+if (mid) {
 	playerAudio.addEventListener('start', () => {
 		player.style.animationName ="player"
 		player.style.bottom="0"
 		last.innerHTML="♪"
-	});
-	playerAudio.addEventListener('stop', () => {
-		last.innerHTML="■"
 	});
 	playerAudio.addEventListener('load', () => {
 		player.style.animationName ="player"
@@ -143,17 +139,13 @@ if (mid)
 		visualizerMidi.src = playerAudio.src;
 		visualizerMidi.load();
 	});
-} else 
-{
+	midCtrlSet.addEventListener('change', (event) => {
+		playerMidi.setAttribute('type', event.target.value);
+	});
+} else {
 	playerAudio.addEventListener('play', () => {
 		player.style.animationName ="player"
 		player.style.bottom="0"
 		last.innerHTML="♪"
 	});
-	playerAudio.addEventListener('stop', () => {
-		last.innerHTML="■"
-	});
 }
-midCtrlSet.addEventListener('change', (event) => {
-	playerMidi.setAttribute('type', event.target.value);
-});
