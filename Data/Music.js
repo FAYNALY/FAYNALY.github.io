@@ -27,7 +27,7 @@ function selection(inst1,inst2) {
 			playerAudio.start();
 			player.style.animationName ="player"
 			player.style.bottom="0"
-			last.innerHTML="♪"
+			last.innerHTML="■"
 		} else if (!playerAudio.playing) {
 			playerAudio.start();
 			player.style.animationName ="player"
@@ -137,9 +137,8 @@ if (mid) {
 	playerAudio.addEventListener('load', () => {
 		player.style.animationName ="player"
 		player.style.bottom="0"
-		last.innerHTML="♪"
+		last.innerHTML="■"
 		playerMidi.src = playerAudio.src;
-		playerAudio.start();
 	});
 	playerMidi.addEventListener('load', () => {
 		playerAudio.start();
