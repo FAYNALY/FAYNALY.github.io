@@ -138,9 +138,7 @@ if (mid) {
 		player.style.animationName ="player"
 		player.style.bottom="0"
 		last.innerHTML="■"
-		playerMidi.src = playerAudio.src;
-	});
-	playerMidi.addEventListener('load', () => {
+		playerMidi.src=playerAudio.src;
 		playerAudio.start();
 	});
 	midCtrlSet.addEventListener('change', (event) => {
