@@ -51,20 +51,18 @@ function selection(inst1,inst2) {
 			playerAudio.load();
 			playerName.innerHTML = '♪-'+inst1.split('/').pop();
 			for (let i = 0; i<MusBtn.length; i++) {MusBtn[i].innerHTML=" ▶"}
-			playerAudio.play();
 			player.style.animationName ="player"
 			player.style.bottom="0"
-			last.innerHTML="♪"
+			last.innerHTML="■"
+			playerAudio.play();
 		} else if (playerAudio.paused) {
-			playerAudio.play();
 			player.style.animationName ="player"
 			player.style.bottom="0"
-			last.innerHTML="♪"
+			playerAudio.play();
 		} else {
-			playerAudio.pause();
 			player.style.animationName ="subPlayer"
 			player.style.bottom="-100"
-			last.innerHTML="■"
+			playerAudio.pause();
 		}
 	}
 }
