@@ -24,6 +24,8 @@ function selection(inst1,inst2) {
 			playerAudio.src = `${inst1}`;
 			playerName.innerHTML = '♪-'+inst1.split('/').pop();
 			for (let i = 0; i<MusBtn.length; i++) {MusBtn[i].innerHTML=" ▶"}
+			playerMidi.setAttribute('type', midCtrlSet.value);
+			if (midCtrlSet.value=="staff"){playerMidi.firstChild.style.backgroundColor="#ffffff"} else {playerMidi.firstChild.style.backgroundColor=""}
 			playerAudio.start();
 			player.style.animationName ="player"
 			player.style.bottom="0"
@@ -136,18 +138,12 @@ if (mid) {
 		player.style.animationName ="player"
 		player.style.bottom="0"
 		last.innerHTML="■"
-		playerMidi.src = playerAudio.src;
-	});
-	playerMidi.addEventListener('load', () => {
+		playerMidi.src=playerAudio.src;
 		playerAudio.start();
 	});
 	midCtrlSet.addEventListener('change', (event) => {
 		playerMidi.setAttribute('type', event.target.value);
-		if (event.target.value=="staff"){
-			playerMidi.firstChild.style.backgroundColor="#ffffff"
-		} else {
-			playerMidi.firstChild.style.backgroundColor=""
-		}
+		if (event.target.value=="staff"){playerMidi.firstChild.style.backgroundColor="#ffffff"} else {playerMidi.firstChild.style.backgroundColor=""}
 	});
 } else {
 	playerAudio.addEventListener('play', () => {
