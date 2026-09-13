@@ -405,13 +405,13 @@ aside>*>*{
 	border-radius: 2vw;
 }
 #midBg{
-	background: #666666;
+	background: #000000;
 	width: 100%;
 	padding: 0;
 	margin: 0;
 }
 #Midi .piano-roll-visualizer {
-	background: #222222;
+	background: #000000;
 	width: 100%;
 	border: none;
 	padding: 0;
