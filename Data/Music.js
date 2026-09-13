@@ -31,17 +31,15 @@ function selection(inst1,inst2) {
 			player.style.bottom="0"
 			last.innerHTML="■"
 		} else if (!playerAudio.playing) {
-			playerAudio.start();
 			player.style.animationName ="player"
 			player.style.bottom="0"
-			last.innerHTML="♪"
+			playerAudio.start();
 		} else {
 			tiempoPausado = playerAudio.currentTime; 
-			playerAudio.stop();
 			playerAudio.currentTime = tiempoPausado; 
 			player.style.animationName ="subPlayer"
 			player.style.bottom="-100"
-			last.innerHTML="■"
+			playerAudio.stop();
 		}
 	} 
 	else {
