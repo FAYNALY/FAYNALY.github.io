@@ -59,7 +59,8 @@ const mid=true, Main = {
             "Main garden",
             "Mdly",
             "Organ dance",
-            "Reolanex"
+            "Reolanex",
+            "Daylight kingdom diorama (Piano)"
         ]
     },
     "Others": [
