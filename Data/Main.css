@@ -703,22 +703,6 @@ audio,midi-player{
 	width: 30vw;
 	padding: 0;
 }
-footer{
-    display: flex;
-    position: relative;
-	flex-flow: column wrap;
-    background-color: #000088;
-    color: #FFFFFF;
-    bottom: 0px;
-    margin: 0;
-    padding: 40px;
-	z-index:-1;
-}
-footer>*{
-    font-size: 1vw;
-	color:#ffffff88;
-	margin:0;
-}
 .timeShowCase {
 	display: flex;
 	min-width: 80%;
@@ -785,14 +769,6 @@ td {
 	padding: 0;
 	margin: 0;
 }
-/*------*/
-.gris{color:#bbbbbb !important;}
-.rojo{color:#ffaaaa !important;}
-.morado{color:#ff99ff !important;}
-.blanco{color:#ffffff !important;}
-.azul{color:#ffffff !important;}
-.nullify{text-decoration-line: line-through;}
-
 #HomP>*{
 	width:13vw; height:13vw;
 }
@@ -828,3 +804,26 @@ td {
 	background-color: magenta;
 	color: #000000;
 }
+footer{
+    display: flex;
+    position: relative;
+	flex-flow: column wrap;
+    background-color: #000088;
+    color: #FFFFFF;
+    bottom: 0px;
+    margin: 0;
+    padding: 40px;
+	z-index:-1;
+}
+footer>*{
+    font-size: 1vw;
+	color:#ffffff88;
+	margin:0;
+}
+/*------*/
+.gris{color:#bbbbbb !important;}
+.rojo{color:#ffaaaa !important;}
+.morado{color:#ff99ff !important;}
+.blanco{color:#ffffff !important;}
+.azul{color:#ffffff !important;}
+.nullify{text-decoration-line: line-through;}
