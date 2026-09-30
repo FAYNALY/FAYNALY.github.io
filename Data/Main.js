@@ -1,84 +1,84 @@
-const
-	mainMenu = document.getElementById("Menu"),
-	mainSecc = document.getElementById("Musi"),
-	player = document.getElementById("player"),
-	playerAudio = document.getElementById("playerAudio"),
-	playerName = document.getElementById("playerName"),
-	playerMidi = document.getElementById("Midi"),
-	midCtrlSet = document.getElementById("midCtrlSet"),
-	MusBtn = document.getElementsByClassName("MusBtn");
-var last, PthLists=[], Mainsecths = Object.keys( Main );
-function Lvs(inst1, inst2) {
-	for (let PthLv of Object.keys( inst1 )) {
-		let PthSc=inst1[PthLv], MLName_1 = PthLv, cosPrev = "";
-		if (!inst2||inst2=="") { cosPrev=""; } else { cosPrev=inst2+'/'; } 
-		if (Object(PthSc) === PthSc) { Lvs(PthSc,cosPrev+PthLv); } else if (PthSc.length>1) { PthLists.push(cosPrev+PthSc); } else { break; }
-	}
-}
-function selection(inst1,inst2) {
-	if (mid) {
-		if (last!=inst2){
-			last = inst2;
-			playerAudio.stop();
-			playerAudio.src = `${inst1}`;
-			playerName.innerHTML = '♪-'+inst1.split('/').pop();
-			for (let i = 0; i<MusBtn.length; i++) {MusBtn[i].innerHTML=" ▶"}
-			playerMidi.setAttribute('type', midCtrlSet.value);
-			if (midCtrlSet.value=="staff"){playerMidi.firstChild.style.backgroundColor="#ffffff"} else {playerMidi.firstChild.style.backgroundColor=""}
-			playerAudio.start();
-			player.style.animationName ="player"
-			player.style.bottom="0"
-			last.innerHTML="■"
-		} else if (!playerAudio.playing) {
-			player.style.animationName ="player"
-			player.style.bottom="0"
-			playerAudio.start();
-		} else {
-			tiempoPausado = playerAudio.currentTime; 
-			playerAudio.currentTime = tiempoPausado; 
-			player.style.animationName ="subPlayer"
-			player.style.bottom="-100"
-			playerAudio.stop();
-		}
-	} 
-	else {
-		if (last!=inst2){
-			last = inst2;
-			playerAudio.pause();
-			playerAudio.currentTime.value=0;
-			playerAudio.firstChild.src = `${inst1}`;
-			playerAudio.load();
-			playerName.innerHTML = '♪-'+inst1.split('/').pop();
-			for (let i = 0; i<MusBtn.length; i++) {MusBtn[i].innerHTML=" ▶"}
-			player.style.animationName ="player"
-			player.style.bottom="0"
-			last.innerHTML="■"
-			playerAudio.play();
-		} else if (playerAudio.paused) {
-			player.style.animationName ="player"
-			player.style.bottom="0"
-			playerAudio.play();
-		} else {
-			player.style.animationName ="subPlayer"
-			player.style.bottom="-100"
-			playerAudio.pause();
-		}
-	}
-}
-function BtnSH(inst1, inst2) {
-	let btn1 = document.getElementsByClassName(inst1);
-	if (inst2==""){
-		for (let i=0; btn1.length>i; i++) { btn1[i].style.display = "none"; }
-	}
-	else {
-		let btn2 = document.getElementById(inst2);
-		if (btn2.style.display != "flex") {
-			for (let i=0; btn1.length>i; i++) { btn1[i].style.display = "none"; }
-			btn2.style.display = "flex";
-		} else { btn2.style.display = "none"; }
-	}
-}
 if (Main){
+	const
+		mainMenu = document.getElementById("Menu"),
+		mainSecc = document.getElementById("Musi"),
+		player = document.getElementById("player"),
+		playerAudio = document.getElementById("playerAudio"),
+		playerName = document.getElementById("playerName"),
+		playerMidi = document.getElementById("Midi"),
+		midCtrlSet = document.getElementById("midCtrlSet"),
+		MusBtn = document.getElementsByClassName("MusBtn");
+	var last, PthLists=[], Mainsecths = Object.keys( Main );
+	function Lvs(inst1, inst2) {
+		for (let PthLv of Object.keys( inst1 )) {
+			let PthSc=inst1[PthLv], MLName_1 = PthLv, cosPrev = "";
+			if (!inst2||inst2=="") { cosPrev=""; } else { cosPrev=inst2+'/'; } 
+			if (Object(PthSc) === PthSc) { Lvs(PthSc,cosPrev+PthLv); } else if (PthSc.length>1) { PthLists.push(cosPrev+PthSc); } else { break; }
+		}
+	}
+	function selection(inst1,inst2) {
+		if (mid) {
+			if (last!=inst2){
+				last = inst2;
+				playerAudio.stop();
+				playerAudio.src = `${inst1}`;
+				playerName.innerHTML = '<spam>♪-'+inst1.split('/').pop()+'<spam>';
+				for (let i = 0; i<MusBtn.length; i++) {MusBtn[i].innerHTML=" ▶"}
+				playerMidi.setAttribute('type', midCtrlSet.value);
+				if (midCtrlSet.value=="staff"){playerMidi.firstChild.style.backgroundColor="#ffffff"} else {playerMidi.firstChild.style.backgroundColor=""}
+				playerAudio.start();
+				player.style.animationName ="player"
+				player.style.bottom="0"
+				last.innerHTML="■"
+			} else if (!playerAudio.playing) {
+				player.style.animationName ="player"
+				player.style.bottom="0"
+				playerAudio.start();
+			} else {
+				tiempoPausado = playerAudio.currentTime; 
+				playerAudio.currentTime = tiempoPausado; 
+				player.style.animationName ="subPlayer"
+				player.style.bottom="-100"
+				playerAudio.stop();
+			}
+		} 
+		else {
+			if (last!=inst2){
+				last = inst2;
+				playerAudio.pause();
+				playerAudio.currentTime.value=0;
+				playerAudio.firstChild.src = `${inst1}`;
+				playerAudio.load();
+				playerName.innerHTML = '♪-'+inst1.split('/').pop();
+				for (let i = 0; i<MusBtn.length; i++) {MusBtn[i].innerHTML=" ▶"}
+				player.style.animationName ="player"
+				player.style.bottom="0"
+				last.innerHTML="■"
+				playerAudio.play();
+			} else if (playerAudio.paused) {
+				player.style.animationName ="player"
+				player.style.bottom="0"
+				playerAudio.play();
+			} else {
+				player.style.animationName ="subPlayer"
+				player.style.bottom="-100"
+				playerAudio.pause();
+			}
+		}
+	}
+	function BtnSH(inst1, inst2) {
+		let btn1 = document.getElementsByClassName(inst1);
+		if (inst2==""){
+			for (let i=0; btn1.length>i; i++) { btn1[i].style.display = "none"; }
+		}
+		else {
+			let btn2 = document.getElementById(inst2);
+			if (btn2.style.display != "flex") {
+				for (let i=0; btn1.length>i; i++) { btn1[i].style.display = "none"; }
+				btn2.style.display = "flex";
+			} else { btn2.style.display = "none"; }
+		}
+	}
 	Lvs(Main);
 	for (let i=0; Mainsecths.length>i; i++) {
 		let gefBtn = document.createElement('button');
@@ -106,12 +106,12 @@ if (Main){
 <lable onclick="selection('./MIDI/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mid',this.nextElementSibling)"><spam>${pthSec[j]}</spam></lable>
 <button class="MusBtn" onclick="selection('./MIDI/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mid',this)"> ▶</button>
 `;
-				}else{/*MP3*/
-					pinch.innerHTML=`
+					}else{/*MP3*/
+						pinch.innerHTML=`
 <a href="./MP3/${PthLists[i]}.mp3" download><img src="./Data/IMG/Ico/MD.png"></a>
 <lable onclick="selection('./MP3/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mp3',this.nextElementSibling)"><spam>${pthSec[j]}</spam></lable>
 <button class="MusBtn" onclick="selection('./MP3/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mp3',this)"> ▶</button>
-`					;
+`;
 				}
 				pthnde.lastChild.lastChild.append(pinch);
 			}
@@ -150,5 +150,29 @@ if (Main){
 			player.style.bottom="0"
 			last.innerHTML="♪"
 		});
+	}
+}
+else
+{
+	function makeScreenshot() {
+		html2canvas(document.getElementById("screenshot"), { scale: 5 }).then(canvas => {
+			prev = document.getElementById("canvasID");
+			if (prev) { prev.remove(); }
+			canvas.id = "canvasID";
+			canvas.style.display = 'linear';
+			document.getElementById("main").appendChild(canvas);
+		});
+	}
+	function setime(number, value) {
+		var caH = Number(value.split(':')[0]);
+		var caM = value.split(':')[1];
+		var fi = caH - number;
+		if ((fi) < 0) { caHp = (fi + 24); } else if ((fi) > 23) { caHp = (fi - 24); } else { caHp = fi; }
+		let valT = document.getElementsByClassName('Tset');
+		for (let i = 0, o = caHp - 12; i < valT.length; i++, o++) {
+			if (o < 0) { valT[i].value = (o + 24).toString().padStart(2, '0') + ':' + caM; }
+			else if (o > 23) { valT[i].value = (o - 24).toString().padStart(2, '0') + ':' + caM; }
+			else { valT[i].value = o.toString().padStart(2, '0') + ':' + caM; }
+		}
 	}
 }
