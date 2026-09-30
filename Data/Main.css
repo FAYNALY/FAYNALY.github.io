@@ -210,13 +210,13 @@ nav>*{
     position: relative;
     flex-flow: column wrap;
 	justify-content: center;
-	vertical-align:top;
 	text-align: center;
-	margin: 0px auto;
     border: 1vw #D52563 solid;
 	border-radius: 15vw;
 	font-size: 1.5vw;
 	text-decoration: none;
+	padding: 0;
+	margin: 0 auto;
 	
 	animation-name: MainBroudsRever;
 	animation-duration: 0.2s;
