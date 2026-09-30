@@ -152,6 +152,3 @@ if (Main){
 		});
 	}
 }
-setTimeout(function(){
-    document.body.classList="sect";
-},500);
