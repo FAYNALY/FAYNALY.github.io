@@ -49,7 +49,7 @@ if (Main){
 				playerAudio.currentTime.value=0;
 				playerAudio.firstChild.src = `${inst1}`;
 				playerAudio.load();
-				playerName.innerHTML = '♪-'+inst1.split('/').pop();
+				playerName.innerHTML = '<spam>♪-'+inst1.split('/').pop()+'<spam>';
 				for (let i = 0; i<MusBtn.length; i++) {MusBtn[i].innerHTML=" ▶"}
 				player.style.animationName ="player"
 				player.style.bottom="0"
