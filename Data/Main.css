@@ -694,6 +694,7 @@ aside>*>*{
 	flex-flow: row nowrap;
     position: relative;
 	flex: 1;
+	width: 75vw;
 	background-color: #2244AA88;
 	text-align: left;
 	border-radius: 2vw 0vw 0vw 2vw;
@@ -702,11 +703,18 @@ aside>*>*{
 	margin:auto;
 	margin-left:1vw;
 }
+#playerName>spam{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	flex: 1;
+	min-width: 0;
+}
 audio,midi-player{
 	display:flex;
 	flex-flow: row nowrap;
     position: relative;
-	width: 30vw;
+	width: 25vw;
 	padding: 0;
 }
 .timeShowCase {
