@@ -60,7 +60,7 @@ const mid=true, Main = {
             "Mdly",
             "Organ dance",
             "Reolanex",
-            "Daylight kingdom diorama (Piano)"
+            "Daylight kingdom diorama (Piano)",
             "Paino something"
         ]
     },
