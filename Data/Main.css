@@ -24,7 +24,7 @@
 }
 @keyframes MenuBrouds2 {
   from	{border-style: solid; border-radius: 1vw;}
-  to	{border-style: double; border-radius: 5vw;}
+  to	{border-style: double; border-radius: 7vw;}
 }
 @keyframes Sizmin {
   from	{transform: scale(75%);}
@@ -467,7 +467,7 @@ aside>*>*{
 	padding: 0;
 	margin: 1vw;
 	border: solid #5555FF 1vw;
-	border-radius: 5vw;
+	border-radius: 7vw;
 	
 	animation-name: MenuBroudsRever;
 	animation-duration: 0.2s;
