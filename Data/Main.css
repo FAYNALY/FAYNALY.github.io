@@ -498,9 +498,11 @@ aside>*>*{
 	display: flex;
     position: relative;
 	flex-flow: row wrap;
+	padding: 0;
+	margin: 0% auto;
 }
 .audioSection{
-	width: 100%;
+	width: 98%;
 	display: flex;
     position: relative;
 	flex-flow: column wrap;
@@ -534,7 +536,7 @@ aside>*>*{
 	justify-content: center;
 	align-content: center;
 	padding: 0;
-	margin: 0% auto;
+	margin: 0.4vh auto;
 }
 .audioCluster>button{
 	display: flex;

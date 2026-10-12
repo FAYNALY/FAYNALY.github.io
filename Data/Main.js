@@ -119,7 +119,7 @@ if (Main){
 				pinch = document.createElement('div');
 				pinch.classList="audioCluster";
 				pinch.id="cluster_"+pthSec[j];
-				pinch.innerHTML=`<button onclick="BtnSH('audioList','list_${pthSec[j]}')">${pthSec[j]}</button><div class="audioList" id="list_${pthSec[j]}" style="display:none;"></div>`;
+				pinch.innerHTML=`<button onclick="BtnSH('audioList','list_${pthSec[j].replaceAll("'", "\\'").replaceAll('"', '\\"').replaceAll(' ', '_')}')">${pthSec[j]}</button><div class="audioList" id="list_${pthSec[j].replaceAll("'", "\\'").replaceAll('"', '\\"').replaceAll(' ', '_')}" style="display:none;"></div>`;
 				if (!pthnde.innerHTML.includes("id=\"cluster_"+pthSec[j]+"\"")) {pthnde.appendChild(pinch);}
 			}
 		}
