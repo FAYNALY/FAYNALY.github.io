@@ -152,8 +152,7 @@ if (Main){
 		});
 	}
 }
-else
-{
+if(screenS){
 	function makeScreenshot() {
 		html2canvas(document.getElementById("screenshot"), { scale: 5 }).then(canvas => {
 			prev = document.getElementById("canvasID");
@@ -175,4 +174,8 @@ else
 			else { valT[i].value = o.toString().padStart(2, '0') + ':' + caM; }
 		}
 	}
+}
+if (indexV){
+	document.getElementById("VideoPlayer").setAttribute("src", indexV);
+	document.getElementById("MideoPlayer").setAttribute("src", indexV);
 }
