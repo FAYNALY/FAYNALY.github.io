@@ -113,7 +113,7 @@ if (Main){
 <button class="MusBtn" onclick="selection('./MP3/${PthLists[i].replaceAll("'", "\\'")}.mp3',this)"> ▶</button>
 `;
 				}
-				pthnde.lastChild.lastElementChild.append(pinch);
+				pthnde.lastElementChild.lastElementChild.append(pinch);
 			}
 			else if (pthSec[j]==pthSec[loe-2]) {
 				pinch = document.createElement('div');
