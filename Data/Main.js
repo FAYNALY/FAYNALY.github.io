@@ -113,15 +113,15 @@ if (Main){
 <button class="MusBtn" onclick="selection('./MP3/${PthLists[i].replaceAll("'", "\\'")}.mp3',this)"> ▶</button>
 `;
 				}
-				pthnde.lastChild.lastChild.append(pinch);
+				pthnde.lastChild.lastElementChild.append(pinch);
 			}
 			else if (pthSec[j]==pthSec[loe-2]) {
 				pinch = document.createElement('div');
 				pinch.classList="audioCluster";
 				pinch.id="cluster_"+pthSec[j];
 				pinch.innerHTML=`
-<button onclick="BtnSH('audioList','list_${pthSec[j].replaceAll("'", "").replaceAll('"', '').replaceAll(' ', '_')}')">${pthSec[j]}</button>
-<div class="audioList" id="list_${pthSec[j].replaceAll("'", "").replaceAll('"', '').replaceAll(' ', '_')}" style="display:none;"></div>
+<button onclick="BtnSH('audioList','list_${pthSec[j].replaceAll("'", "•").replaceAll('"', '•').replaceAll(' ', '_')}')">${pthSec[j]}</button>
+<div class="audioList" id="list_${pthSec[j].replaceAll("'", "•").replaceAll('"', '•').replaceAll(' ', '_')}" style="display:none;"></div>
 `;
 				if (!pthnde.innerHTML.includes("id=\"cluster_"+pthSec[j]+"\"")) {pthnde.appendChild(pinch);}
 			}
