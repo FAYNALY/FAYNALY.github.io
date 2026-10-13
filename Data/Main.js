@@ -103,14 +103,14 @@ if (Main){
 				if (mid){/*MIDI*/
 					pinch.innerHTML=`
 <a href="./MIDI/${PthLists[i]}.mid" download><img src="./Data/IMG/Ico/MD.png"></a>
-<lable onclick="selection('./MIDI/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mid',this.nextElementSibling)"><spam>${pthSec[j]}</spam></lable>
-<button class="MusBtn" onclick="selection('./MIDI/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mid',this)"> ▶</button>
+<lable onclick="selection('./MIDI/${PthLists[i].replaceAll("'", "\\'")}.mid',this.nextElementSibling)"><spam>${pthSec[j]}</spam></lable>
+<button class="MusBtn" onclick="selection('./MIDI/${PthLists[i].replaceAll("'", "\\'")}.mid',this)"> ▶</button>
 `;
 					}else{/*MP3*/
 						pinch.innerHTML=`
 <a href="./MP3/${PthLists[i]}.mp3" download><img src="./Data/IMG/Ico/MD.png"></a>
-<lable onclick="selection('./MP3/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mp3',this.nextElementSibling)"><spam>${pthSec[j]}</spam></lable>
-<button class="MusBtn" onclick="selection('./MP3/${PthLists[i].replaceAll("'", "\\'").replaceAll('"', '\\"')}.mp3',this)"> ▶</button>
+<lable onclick="selection('./MP3/${PthLists[i].replaceAll("'", "\\'")}.mp3',this.nextElementSibling)"><spam>${pthSec[j]}</spam></lable>
+<button class="MusBtn" onclick="selection('./MP3/${PthLists[i].replaceAll("'", "\\'")}.mp3',this)"> ▶</button>
 `;
 				}
 				pthnde.lastChild.lastChild.append(pinch);
@@ -119,7 +119,10 @@ if (Main){
 				pinch = document.createElement('div');
 				pinch.classList="audioCluster";
 				pinch.id="cluster_"+pthSec[j];
-				pinch.innerHTML=`<button onclick="BtnSH('audioList','list_${pthSec[j].replaceAll("'", "\\'").replaceAll('"', '\\"').replaceAll(' ', '_')}')">${pthSec[j]}</button><div class="audioList" id="list_${pthSec[j].replaceAll("'", "\\'").replaceAll('"', '\\"').replaceAll(' ', '_')}" style="display:none;"></div>`;
+				pinch.innerHTML=`
+<button onclick="BtnSH('audioList','list_${pthSec[j].replaceAll("'", "•").replaceAll('"', '•').replaceAll(' ', '_')}')">${pthSec[j]}</button>
+<div class="audioList" id="list_${pthSec[j].replaceAll("'", "•").replaceAll('"', '•').replaceAll(' ', '_')}" style="display:none;"></div>
+`;
 				if (!pthnde.innerHTML.includes("id=\"cluster_"+pthSec[j]+"\"")) {pthnde.appendChild(pinch);}
 			}
 		}
