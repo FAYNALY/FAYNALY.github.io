@@ -377,8 +377,8 @@ aside>*>*{
 	margin: 0;
 }
 .douSec>*>*{
-	width: 35vw;
-	height: 20vw;
+	flex: 1;
+	height: relative;
 }
 #midCtrl{
 	width: 100%;
