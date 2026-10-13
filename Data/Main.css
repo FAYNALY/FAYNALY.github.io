@@ -86,11 +86,14 @@
 		text-align: center !important;
 		justify-content: center !important;
 		align-content: center !important;
+		font-size: 3vw !important;
 	}
 	main a>img{
 		display: flex !important;
 		width: 10vw !important;
 		height: 10vw !important;
+		padding: 0 !important;
+		margin: 0 auto !important;
 	}
 	main a, main a>iframe{
 		max-width: 99% !important;
@@ -290,55 +293,38 @@ aside>*>*{
 	display: flex;
     position: relative;
 	flex-flow: column wrap;
-}
-.infosec>*{
-	display: flex;
-    position: relative;
-	flex-flow: column wrap;
+	padding: 0;
+	margin: 0;
 }
 .triSec{
 	display: flex;
     position: relative;
 	flex-flow: row wrap;
-	justify-content: center;
-	align-content:center;
-	text-align:center;
     background-color: #000055;
 	color: #FFFFFF;
-	font-size: 1.50vw;
+	font-size: 2vw;
 	padding: 0;
 	margin: 0;
+	margin-bottom: 0.5vw;
 }
-.triSec>*{
+.triSec>section{
 	display: flex;
     position: relative;
 	flex-flow: column wrap;
 	border: solid #FFFFFF 0.3vw;
 	border-radius: 1vw;
-	flex:1;
+    background-color: #000055;
+	flex: 1;
 }
-.triSec>*>*{
-	display: flex;
-    position: relative;
-	flex-flow: column wrap;
-    position: relative;
-	width: 100%;
-}
-.triSec>*>.ports{
+.triSec>section>div{
+	justify-content:center;
+	align-content: center;
 	display: flex;
     position: relative;
 	flex-flow: row wrap;
-	bottom: 0vw;
-	align-content: center;
+	margin-bottom: auto;
 }
-.triSec>*>*>*{
-	display: flex;
-    position: relative;
-	flex-flow: column wrap;
-	width: 100%;
-	text-align: center;
-}
-.triSec a{
+.triSec>section>div>a{
 	display:flex;
 	flex-flow: row wrap;
 	width: 100%;
@@ -353,25 +339,18 @@ aside>*>*{
 	padding: 1%;
 	margin: 0;
 }
-.triSec a:hover{
+.triSec>section>div>a:hover{
 	transform: scale(120%);
 	
 	animation-name: Sizmax;
 }
-.triSec a>img{
+.triSec>section>div>a>img{
 	display: flex;
     position: relative;
 	flex-flow: row nowrap;
-	transform: translate(1vw, 0.8vw) scale(100%);
+	transform: translate(1vw, 1.8vw) scale(100%);
 	width: 3vw;
 	height: 3vw;
-	cursor: pointer;
-}
-.triSec iframe{
-	display:flex;
-	align-objects: bottom;
-	width: 100%;
-	text-decoration: none;
 	cursor: pointer;
 }
 .douSec{
@@ -383,7 +362,7 @@ aside>*>*{
 	text-align: center;
     background-color: #000055;
 	color: #FFFFFF;
-	font-size: 1.50vw;
+	font-size: 1.5vw;
 	padding: 0;
 	margin: 0;
 }
