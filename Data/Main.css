@@ -377,7 +377,7 @@ aside>*>*{
 .douSec{
 	display: flex;
     position: relative;
-	flex-flow: row wrap;
+	flex-flow: column wrap;
 	justify-content: center;
 	align-content: center;
 	text-align: center;
@@ -387,7 +387,17 @@ aside>*>*{
 	padding: 0;
 	margin: 0;
 }
-.douSec>*>*>*{
+.douSec>*{
+	display: flex;
+    position: relative;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+.douSec>*>*{
 	width: 35vw;
 	height: 20vw;
 }
