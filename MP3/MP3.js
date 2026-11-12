@@ -980,12 +980,9 @@ const mid=false, Main = {
         ]
     },
     "Memes": [
-        "among us remix (my cumbia)",
-        "Cool Remix extended",
-        "Cool Remix",
+        "Cool remix Queen's car remastered",
         "Main theme - Wii Sports (Minor key)",
         "PS5 [Fortnite Battle Pass] - MrMoMMusic (feat. Alan Walker)",
-        "Smash Susie",
 		"WhatsappLovania"
     ]
 };
